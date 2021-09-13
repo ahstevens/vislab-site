@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center">VTDP Dynamic Queries </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p>In some data set  all entities have the  same set of attributes.  The attributes  define the data dimensions and each entity can be thought of as a point in a  multidimensional space. A set of sliders is provided that can narrow the range on  each of many attributes. Each slider adjustment is an epistemic action,  narrowing the range of what is displayed.   </p>
+  <p><span class="HH2">Example 1: </span>A database of houses is shown on a map with a symbol for each house. The user adjusts sliders to select the price, number of bedrooms, bathrooms, square footage of living space, and distance from the nearest school [1].  </p>
+  <p>  <span class="HH2">Example 2: </span>A scatterplot shows the set of stocks traded on the New York Stock Exchange. The axes represent market captitalization and annual increase/decrease in value. The user adjusts sliders to select price/earnings, monthly gain. Radio buttons are used to select industry sector. </p>
+  <p>The method has most often been used with scatter plots and  to a lesser extent time series plots, but it can work with ranges displayed on  maps, and with node link diagrams where restrictions can be placed on the nodes  or links.</p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      Visual thinking process with dynmamic queries 
+    </caption>
+    <tr>
+      <td width="749" height="250"><p><em>Display environment: A display with symbols representing entities drawn from a set of  multidimensional discrete data, with a set of controls that restricts the range  displayed on each of the data dimensions.</em></p>
+        <ol>
+          <li><em>User constructs task relevant visual query that can be addressed by viewing a subset of multi-dimensional discrete data defined by a hyper-box.
+            </em></li>
+          <li><em>Execute two visual queries on display (a)Is the number of targets small enough to make drill down feasible. (b) </em><em>Is a pattern found or high relevance symbol visible? </em></li>
+          <li><em>If as a result of 2b a  high relevance symbol is found, execute an epistemic action to drill down for additional information. Usually the results will be presented in a different display window. </em></li>
+          <li><em>Otherwise, execute an epistemic action, dragging a slider which causes the computer to adjust a range on a data dimension and display the modified subset of the data.</em></li>
+          <li><em>Repeat from 2 until either task is successfully completed or abandoned. </em></li>
+        </ol></td>
+    </tr>
+  </table>
+
+<iframe src="http://assets.oculusinfo.com/demos/vtdp/dynamic-queries/index.html" style="border:none;" width="750" height="725"></iframe>
+  <p>Dynamic Queries Illustrated with using <a href="http://www.aperturejs.com/">Aperture JS </a></p>
+  <p><span class="HH2">Implementation Guideline:</span> Ideally, update following slider manipulation is very rapid (&lt;100 msec). </p>
+  <p><span class="HH2">Data Guideline:</span> If we assume that each dynamic query slider can be used to  reduce the range selected to 10% of the original, then the number of objects  that be interactively queried is &gt; 10 to the power <em>d</em> where <em>d </em>is the number of  dimensions. So five sliders will allow for 100,000 objects to be interactively  viewed. If the goal is to get to a small number of objects for drill down then  the final on-screen display should contain fewer than 10 objects.    </p>
+  <span class="HH2">Visual Query Guideline:</span> If additional attributes can be encoded in the data glyphs this can facilitate visual search for the sought after information.
+  <p class="HH1">References</p>
+  <div id="gs_cit1">1. Ahlberg, C., &amp; Shneiderman, B. (1994, April). Visual   information seeking: tight coupling of dynamic query filters with starfield   displays. In <em>Proceedings of the SIGCHI conference on Human factors in   computing systems</em> (pp. 313-317). ACM.</div>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

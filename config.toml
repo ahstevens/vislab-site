@@ -1,0 +1,30 @@
+title = "Data Visualization Research Lab"
+baseURL = "http://ccom.unh.edu/vislab/"
+languageCode = "en-us"
+paginate = 6
+
+canonifyurls=true
+
+[params]
+  builtBy = "ahs"
+  defaultImage = "gopher.jpg"
+
+  facebook = ""
+  quora = ""
+  twitter = ""
+  github = ""
+  email = ""
+
+  fbLikeBox = ""
+  fbAppId = ""
+  fbPageUrl = ""
+  fbPageTitle = ""
+
+  analytics = ""
+  disqus = ""
+
+  custom_css = ["css/custom.css"]
+
+  [params.copyright]
+     name = "CCOM"
+     link = "https://ccom.unh.edu"

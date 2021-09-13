@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("../Templates/VTDPs.css");
+-->
+</style>
+<link href="VTDPs.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Drill Down-Close Out with Hierarchical Aggregation</div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p>In many big data applications it is not possible to show all  entities at once, so they must be aggregated before visualization is possible.  The basic interaction is clicking on an object of interest whereupon it opens  revealing the visual representations of the objects that it stands for. A  reverse operation closes the object. For aggregated objects to be meaningfully  used they must visually portray either sufficient information for decision  making (aggregated average data may be all that needed in some cases).  Aggregated objects must display what Pirolli  and Card call <em>information scent</em>,  graphical cues to what they contain. One solution is to cause that key  information to propagate up using some consolidation method.  This provides visual scent for drill down  operations.   A screen budget combined  with the number of data objects can be used to calculate the degree of  aggregation necessary.</p>
+  <p><span class="HH2">Example 1</span>:  A highly modualarized software system consisting of one million lines of code. At the top level there are 10 large modules, each of these contains 20-50 sub modules, and each of these contains 20-50 software objects. Each object conains 30-200 lines of code. The task is to understand the relationship between components within and between modules; for examaple, which modules are directly connected and how.    </p>
+  <p><span class="HH2">Example 2</span>: A large set of news stories is subject to heirarchical semantic aggregation. The task is to find the major news stories we are not looking for. Obtain a conceptual summary of a corpus of documents.    </p>
+  <p><span class="HH2">Example 3:</span> A nested social network. Some social networks are nested in the sense that they form highly interconnected local communities, with only weak couplings between communities. These kinds of networks can be easily nested based on community and the nesting may be heirarchical in that large communities may be decombosed into smaller sub-communities. </p>
+  <p><span class="HH2">Example 4:</span> File browser. In this variant a single user or group has manually organized their work into folders and sub-folders.  </p>
+  <p>&nbsp;</p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      An overview of the process of drill-down, close-out 
+    </caption>
+    <tr>
+      <td width="749"><br />
+  Display Environment:  Symbols representing aggregations of data.
+    <ol>
+      <li>Based on a screen budget, the quantity and  architecture of the data, the computer creates a hierarchy of entities, each  having a visual representation that reveals some aspect of its constituent  parts.</li>
+      <li>The visualization begins with a display  of the top level object.</li>
+      <li>The analyst conducts a visual search for  informative objects based on some aspect of their visual appearance (visual  scent)</li>
+      <li>Click on object judged to have the  highest probability of yielding useful information.</li>
+      <li>If useful information is acquired, save  in human or machine memory.</li>
+      <li>Close object.</li>
+      <li>Repeat from 3.</li>
+    </ol></td>
+    </tr>
+  </table>
+  <p><span class="HH1">Data budget and Screen budget</span>  </p>
+  <p><span class="HH2">Implementation Guideline:</span> The number of on screen objects is likely to be somewhere  between ten and a few hundred. Similarly, each object can be an aggregation of  between ten and  few hundred objects.</p>
+  <p>
+    <span class="HH2">Implementation Guideline:</span>Roughly: use aggregation/drill down when  there are 3 or fewer levels in the hierarchy and  when information scent is high p &gt;0.8. Where  p is probability of selecting the right node for drill down based on the  information available about that node</p>
+  <p><span class="HH2">Data Guideline: </span>It is essential that there be some semantic basis for categorization. There is little point in  dividing a large homegeneous set of entitities into sub groups an arbitrary manner. </p>
+  <p><span class="HH2">Visual Query Support:</span> If the  visual scent cue being searched for is pre-attentive then the time to click may be  close to constant. If it is not then slow serial search will occur. Often the visual scent is in the form of text labels and search is necessarily serial. Any opportunity to add visual scent can narrow the search and greatly increase cognitive efficiency.  </p>
+  <span class="HH2">Cognitive Guideline: </span>Aggregration and resulting information scent should relate to cognitive tasks. 
+  <p><span class="HH1">Aggregation methods</span>  </p>
+  <p>It is essential that aggregate objects contain and display  useful information.  In general it is  best if the aggregations takes advantage of some inherent structure of the  data.<br />
+    Consolidation principle 1: Statistical summary:  Aggregate objects can display basic  statistical properties of the component: sum, median, average.<br />
+    Consolidation principle 2: Exceptions: In some monitoring  applications the key information relates to the detection of faults. This  information can be propagated upward. The user notices exceptions during the  visual search and drills down.  <br />
+    Consolidation principle 3: Temporal Change: In some  monitoring applications, any change is of interest.  Change information can be propagated  upward.  A change threshold may be  involved.  </p>
+  <p class="HH1">IMPLEMENTATIONS</p>
+  <p class="HH1">Manual Open Close Operations </p>
+  <p>The most common and simple version of this VTDP is the heirarchical tree browsers. Clicking on a particular node expands the tree to the next level. It is possible to interactively explore even quite large trees with careful attention to layout. </p>
+  <p class="HH2">Tree variant  </p>
+  The figure below left
+  shows the result of heirarchically clustering of the infamous wiki leaks corpus. Various sub categories are highlighted and color coded to reference a table on the right. This support access to particlular topics.
+  Sometime this kind of tree view is called a dendogram.
+  <p class="HH2"><img src="Images/IngramMunznerStray.png" alt="IngramMunzner" width="1100" height="467" /></p>
+  <p>E.g. Ingram </p>
+  <span class="HH2">Folder Variant </span>
+  <p>&nbsp;</p>
+  <p class="HH1">Intelligent Zooming on Graphs </p>
+  <p>Sometimes networks are inherently heirachically structured. In other cased networks can be heirarchically structured by means of algorithms. In both instances, the drill down close out interaction can be applied. </p>
+  <p><img src="Images/F11.21_I_ZOOM.jpg" alt="IntelligentZoom" width="800" height="210" /></p>
+  <p class="HH1">Implementation: </p>
+  <p class="HH1">Dealing with High Degree Nodes  </p>
+  <p>&nbsp;</p>
+  <p>Example: Overview Stray, Karlsson, Munzner, Ingram, Brehmer. </p>
+  <div id="gs_cit1">Ingram, S., Munzner, T., &amp; Stray, J. (2012). Hierarchical   Clustering and Tagging of Mostly Disconnected Data (Vol. 1). Tech. Rep.   TR-2012-01, University of British Columbia Department of Computer Science.</div>
+  <p>&nbsp;</p>
+  <p><em><strong>Use Guideline:</strong></em></p>
+  <p><em><strong>Implementation Guideline:</strong></em></p>
+  <p class="bodytext">&nbsp;</p>
+  <span class="HH1">References</span>
+  <p class="bodytext">Munzner, T., Guimbretière, F.,  Tasiran, S., Zhang, L., and Zhou. Y. TreeJuxtaposer: Scalable Tree Comparison using Focus+Context with Guaranteed Visibility.    SIGGRAPH 2003,  453-462. </p>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

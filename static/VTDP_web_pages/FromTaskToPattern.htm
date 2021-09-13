@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>From Task to Pattern</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center">
+            <p class="Title">Visualization Discovery Task Analysis for Visualization  Design</p>
+          </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">A good starting point for analytic tasks is the “Find out: who, what, where, when, why and how” mantra of the investigative journalist.  Since the material we are concerned with is somewhat different from the typical fodder of journalism we begin with some definitions using the terminology of entity relationship modeling.  </p>
+  <span class="HH1">Who, What </span>
+  <p class="bodytext">These terms refer the entities we are concerned with.  They can be individuals or organizations, or places such as buildings, or vehicles. For some applications the whats may be router computers in a communications network.   Entities can have attributes. These are the details of an individual, their height, weight, where they work and so on.  Many attributes are best captured as relationships between entities. So we do not think of a workplace as an attribute of an entitity, but rather as a relationship between the person (an entity) and a building or organization (another entitity).  Whether some property is defined as an attribute of an entity or as a link to another entity is usually a matter of analytical convenience. </p>
+  <span class="HH1">Where </span>
+  <p class="bodytext">Geographic location is a specific kind of attribute that is set apart from the others because of the special set of visualization devices (maps) developed for it.  However, <em>where</em> can sometimes be also treated as a categorical label, such as the name of a city. </p>
+  <span class="HH1">When </span>
+  <p class="bodytext"><em>When</em> is similar to where in that it generally demands a special kind of visualization, in this case in the form of a time line controller. </p>
+  <span class="HH1">Why  </span>
+  <p class="bodytext">Discovering <em>why</em> something happened is often a form of model building. As such it is often not accomplished by means of simple discovery, instead it is the result of a kind of informal hypothesis testing . </p>
+  <span class="HH1">How  </span>
+  <p>How is actually the largest and most complex category.  This relates to the relationships between entities.  How did information get from person to person?  How are events linked to people and places? How did a certain set of events develop over time? </p>
+  <span class="HH1">DISCOVERY TASK TAXONOMY (SEARCH AND EXAMINE) </span>
+  <p class="bodytext">Analysis is about discovery, and it is always goal oriented.  No one simply wants to know all the facts pertaining to all of the individuals in an organization.  So the analyst needs to review the facts pertaining to a particular analytic goal and this determines the focus of the analytic lens.   For visualization to be part of the solution it is essential that some aspect of the problem to be transformable to a graphical expression where a visual pattern search can help with the solution (The visual query). </p>
+  <p class="bodytext">We can classify pattern searches into visual queries regarding objects, spatial patterns, network patterns, temporal patterns, and combinations of these.  Each of these dictates the basic type of data representation, and ultimately the kinds of visual queries that can be useful.  In the following the different kinds of patterns, and their representations are summarized. </p>
+  <span class="HH1">Discover Properties of Entities (who and what) </span>
+  <p class="bodytext">Entities are symbols or glyphs.  Sets of object are often provided in the form of tables.  Objects are also part of all of the other pattern tasks </p>
+  <ul>
+    <li>VTDP: Drill down (on a single glyph representing a heterogeneous collection of data). </li>
+    <li>VTDP: Table data: sort and compare </li>
+    <li>VTDP: Table data: Compute, chart and find patterns (can be mixed initiative). E.g. clusters, correlations </li>
+  </ul>
+  <span class="HH1">Discover Task Relevant Geospatial Patterns </span>
+  <p class="bodytext">When data is geocoded we are likely to be concerned with discovering spatial patterns and spatial relationships </p>
+  <ul>
+    <li><a href="VTDP_Pattern_Comparisons.htm">VTDP: Pattern comparisons in a large information space</a>, can include finding anomalous geospatial patterns </li>
+    <li>VTDP: Layer comparisons* </li>
+    <li>VTDP: Comparisons with other views of objects (Brushing to scatter plots, etc) </li>
+  </ul>
+  <span class="HH1">Discover Task Relevant Network Patterns </span>
+  <ul>
+    <li>VTDP: Pathfinding on a node link diagram </li>
+    <li><a href="VTDP_FindLocalNetPatterns.htm">VTDP: Find local connection patterns using degree of relevance highlighting</a> </li>
+    <li>VTDP: Lateral exploration </li>
+    <li>VTDP: Drill down close-out with hierarchical aggregation </li>
+  </ul>
+  <span class="HH1">Discover Task Relevant Temporal patterns </span>
+  <ul>
+    <li>VTDP: Discovering novel temporal patterns *</li>
+    <li>VTDP: Discovering anomalous temporal patterns * </li>
+    <li>VTDP: Comparing temporal patterns* </li>
+  </ul>
+  <span class="HH1">Spatial and Network</span>
+  <p class="bodytext">E.g. a road map </p>
+  <ul>
+    <li>VTDP: Path finding </li>
+    <li>VTDP: Brushing if separate views of map and network are used. </li>
+  </ul>
+  <span class="HH1">Network and Temporal  </span>
+  <ul>
+    <li>VTDP: Drill down </li>
+    <li>VTDP: Time series comparisons  on links* </li>
+    <li>VTDP: Network traffic patterns * (trajectory density plots). </li>
+    <li>VTDP: Find Anomalies * </li>
+    <li>VTDP: Congestion. </li>
+  </ul>
+  <span class="HH1">Spatial and temporal (trajectories) </span>
+  <ul>
+    <li>VTDP: Find space time intersections * </li>
+  </ul>
+  <span class="HH1">Spatial, network and temporal </span>
+  <ul>
+    <li>VTDP: Traffic flow (pedestrian, road traffic) Norms, bottlenecks * </li>
+    <li>VTDP: Alternate routes * </li>
+    <li>VTDP: Route planning *  Note this is a special case of finding paths </li>
+  </ul>
+  <span class="HH1">General </span>
+  <ul>
+    <li>VTDP: Cognitive reconstruction </li>
+    <li>VTDP: Marshall: Rearrange, create categories* </li>
+    <li>VTDP: Reason: Rearrange, Link* </li>
+    <li>VTDP: Presentation* </li>
+  </ul>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDATA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

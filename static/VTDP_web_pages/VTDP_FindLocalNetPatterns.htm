@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Find Local Network Patterns </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">It is common in working with network data to be much more interested in short path relationships between nodes than in nodes that are connected by longer paths. Cognitive tasks are to discover what is connected to a particular node, how the nodes are connected and what is the pattern of connections? Both node and link attributes may be important. </p>
+  <p class="bodytext">Example 1: Who knows who in a social network? What are the relationships between them? </p>
+  <p class="bodytext">Example 2: In a sofware diagram what modules depend on a particular node? What modules does it depend on?</p>
+  <p><span class="HH1">IMPLIEMENTATIONS</span>    </p>
+  <p>  <span class="HH1">Static Diagram </span>  </p>
+  <p class="bodytext">A non-interactive  diagram node link diagram is the most common solution with attributes of entities graphically encoded in the nodes and the attributes of relationships encoded using graphical properties of the links. </p>
+  <p><span class="HH2">Guideline: </span>A fixed layout diagram is useful where the number of nodes is &lt;30 and the node degree is &lt; 3 for all nodes. </p>
+  <p><span class="HH1">Degree of Relevance Highlighting</span>  </p>
+  <p class="bodytext">In degree of relance highlighting [1,2] touching a node causes  near neighbors and their links to become highlighted.  A path radius of two or three is used for highlighting obtained through a breadth first search beginning with the selected node. The advantage of this method is that it enables substantially larger graphs to be rapidly explored. The method works with graphs 30 &gt; n &gt; 500. where n is the number of nodes. Also, that there can be no high degree nodes. The problem with high degree nodes is that selecting one of them can cause too much of the graph to be highlighted yielding little useable information. </p>
+  <p align="center" class="bodytext"><img src="Images/F11.20_MEgraph.jpg" alt="MEGraph" width="600" height="449" /></p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      Visual thinking process with degree of relevance hightlighting 
+    </caption>
+    <tr>
+      <td width="749" height="250"><p><em>Display environment: A  display containing many symbols representing entities linked by a complex  overlapping set of relationships.</em></p>
+        <ol>
+          <li><em>Construct visual query to find a symbol  that may lead to useful information (information scent).<br />
+            Execute an  epistemic action by selecting a symbol.</em></li>
+          <li><em>Computer carries out a breadth first search to a predetermined depth (e.g. 2) and highlights all nodes and edges within that range. </em></li>
+          <li><em>Execute a visual query pattern among  highlighted symbols to interpret highlighted information.</em></li>
+          <li><em>If a very high relevance pattern is found,  execute an epistemic action to drill down for additional information. Usually  this will be presented in a different display window.</em></li>
+          <li><em>Repeat from 1 as  needed, cognitively marking visited symbols.</em></li>
+        </ol></td>
+    </tr>
+  </table>
+  <p><span class="HH2">Use Guideline:</span> Consider using degree of relevance highlighting with medium sized network diagrams (30&lt;n&lt;500) where there are no high degree nodes.  </p>
+  <p><span class="HH2">Perceptual Guideline: </span>The highlighting method should be preattentive. This means that it should be distinct from color or shape codings already used in thie diagram. Motion or blinking should be considered as a highlighting method that minimally interferes with the visual appearance of nodes and links. </p>
+  <p><span class="HH2">Cognitive Guideline</span>: In a complex diagram it may be difficult to remember parts of the diagram that have already been explored. An ability to build up patterns and extract them is likely to be needed. </p>
+  <p>&nbsp;</p>
+        <!-- TemplateEndEditable --> <span class="HH1">References</span>
+        <ol>
+          <li>Munzner, T., Guimbreti6re, E, and Robertson, G. (1999).  Constellation: A visualization tool for linguistic queries from MindNet. Proceedings  of the 1999 IEEE Symposium on Information Visualization, 132-135,  San Francisco, CA, October 25-26, 1999. </li>
+          <li>Ware, C.  Gilman, A.T. and Bobrow, R.J.  (2008).  Visual Thinking with an Interactive Diagram. Lecture Notes in Artificial  Intelligence.  5223. 118-126.  </li>
+        </ol></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDATA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Model-Based Interactive Planning</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("../Templates/VTDPs.css");
+-->
+</style>
+<link href="VTDPs.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Model-Based interactive Planning for System Design </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p>For an increasing number of applications human decision making is supported by a computer model of some system.  In general, such models start with some existing state of a system and run the model forward in time of a period ranging from hours to many years. The human decision maker operates in an interactive loop adjusting model parameters, representing possible alternative strategies, and combining knowledge that only they have with the model forecast to decide on a course of action.</p>
+  <p><span class="HH2">Example 1</span>:  A  Business spreadsheet is used to forecast profit margins based on assumptions  about such variables as materials costs, labor costs, cost of transportation,  etc. The output is a time series of forecast revenues and profits.    </p>
+  <p><span class="HH2">Example 2</span>: A traffic behavior model is used to simulate the effect of a new intersection design on congestion patterns.</p>
+  <p><span class="HH2">Example 3:</span> A model of interactions between a number of commercial fish species is used to forecast the effects of changing the allowable catch.    </p>
+  <p>&nbsp;</p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      An overview of the process of model-based interactive planning 
+    </caption>
+    <tr>
+      <td width="749"><br />
+        <em>Display Environment:  Model  output is displayed as time series plots, or possibly a map with a time slider.  A set of sliders or input boxes allow user to change model parameters.        </em>
+        <ol>
+      <li><em>User  constructs a hypothesis concerning the effects of a change in some model  parameter(s) relating to design alternatives, business or management decisions.</em></li>
+      <li><em>User  adjusts the parameter(s) to test the hypothesis.</em></li>
+      <li><em>Visually  query resulting changes in forecasts.</em></li>
+      <li><em>Incorporate results into mental model of system behavior. This model incorporates features both of the computer model and prior experience relating to system behavior. </em></li>
+      <li><em>Repeat from 1 until an acceptable solution is found </em></li>
+      </ol></td>
+    </tr>
+  </table>
+  <p><span class="HH1">Cognitive and Perceptual Issues</span>  </p>
+  <p><span class="HH2">Visual Query Support :</span> Common queries relate to how forecast outcomes will change based on alternative system design or business decisions. It is therefore important that the time series plots show both the new forcast and a previous or baseline forecast and that differences are clear. </p>
+  <p>
+    <span class="HH2">Cognitive Guideline:</span>The  speed of the cognitive process depends largely on the speed with which the  forecast is updated as a result of changes in model parameters.  Real time update is ideal.</p>
+  <p><span class="HH2">Display Guideline :</span>Since  design decisions often have to be justified to others, a way of saving  simplified views showing the effect of different alternatives can be useful.</p>
+  <p class="HH1">EXAMPLE APPLICATION </p>
+  <p> The figure below shows an interface to the MSPROD fisheries model designed by Carmen St Jean and Colin Ware. The model is described in [1].The analyst can change the fishing effort on different species categories and see the resulting change in forecast instantaneously. The shaded portion of each time series plot shows the change from a previous forecast. </p>
+  <p>The arcs to the left and right show interactions between fish species representing competition and predation between different species.  These are reveal the workings of the model and allow for an analysis to not only see that a forecast has changed, but also to perceive the reason for the change. </p>
+  <p><img src="Images/MSProdVis.png" alt="MSProdVisualization" width="905" height="567" /></p>
+  <p class="HH1"><span class="HH1">References</span>  </p>
+  <p class="bodytext">[1] Gamble R, Link J. (2009) Analyzing the tradeoffs among ecological  and fishing effects on an example fish community: A multispecies (fisheries)  production model. Ecological Modelling.  220(19).</p>
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

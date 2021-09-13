@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+// Our variables
+$base-font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #fff;
+$background-color: #3e556c;
+$brand-color:      #44b4c4;
+$brand-color-2:    #78c5e2;
+$brand-color-3:    #d8b997;
+$brand-color-4:    #445c5c;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "bootstrap-readable",
+        "layout",
+        "custom",
+        "syntax-highlighting"
+;

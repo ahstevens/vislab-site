@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Path Fiding</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Pathfinding Using a  Node-Link Diagram or a Map </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">In a typical node-link diagram entities are given by the nodes and relationships are given by the links between them. Relationships between entities are discovered by finding the paths between them. </p>
+  <p><span class="HH2">Example: </span>Given a social network diagram showing communication channels between individuals, discover the possible pathways whereby information may have travelled from one individual to another. This example is also used in the <a href="VTDP_Visual_Query.html">VTDP Visual Query</a>. </p>
+  <p><span class="HH2">Example:</span> Find a route on a road map between one location,  denoted by a symbol, and another.  </p>
+  <p>&nbsp;</p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      The path finding process 
+    </caption>
+    <tr>
+      <td width="749" height="175"><p><em>Display Environment:   A node-link diagram with symbols representing nodes and colored lines representing links between nodes. Alternatively, a roadmap with symbols representing cities, and colored lines representing roads between the cities. </em></p>
+        <ol><li><em> Conduct a visual  search to find node symbols representing start and end points.</em></li>
+          <li><em>Mark these in  mental map of display space.</em></li>
+          <li><em>Fixate the start  symbol.</em><br />
+            <em>3.1 Extract patterns corresponding to  connecting lines of a particular color that trend in the right overall  direction.  </em><br />
+            <em>3.2 Mentally mark the end point symbol of  the best candidate line.</em></li>
+          <li><em>Repeat from 3  using new start point until end point is located.</em></li>
+          <li><em>Push information concerning the path to  logical propositional store (only a cognitive hint is needed because the path  can be easily reconstructed.)</em></li>
+          <li><em>Repeat from 3 to  find alternative candidate paths, avoiding paths already found.</em></li>
+        </ol></td>
+    </tr>
+  </table>
+  <p class="bodytext">Graph drawingis is an academic field in which the major goal is to lay out graphs so that the links between nodes are clear. Some of the important principles are:</p>
+  <ul>
+    <li>Minimize link crossings, especially avoid edge crossings at acute angles.</li>
+    <li>Keep path lengths short, especially for important paths.</li>
+    <li>Avoid having links cross nodes where there is not connection.   </li>
+  </ul>
+  <p class="bodytext">For simple networks &lt; 30 nodes and &lt; 45 links, a clear 2D non interactive layout many be possible. When there are more nodes than this interactive methods can be used</p>
+  <p class="bodytext">For more related information see <a href="VTDPAggregation.html">VTDP: Drill Down-Close Out with Hierarchical Aggregation</a>,  and <a href="VTDP_FindLocalNetPatterns.htm">VTDP: Find Local Network Patterns</a> </p>
+  <p class="bodytext">When the links in a network are weighted and the networks are complex,  algoritms may be useful in finding the shortest paths. An example  is finding routes with a road map; in this case there are weights for the distance between junctions and weights for the speed or travel along road segments.  </p>
+  <p class="bodytext">&nbsp; </p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Drill Down</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("../VTDP_web_pages/VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTPD: Drill Down   </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">In data visualization “drilling down” is the name given to the epistemic action whereby more information is obtained about a symbolically displayed entity (Shneiderman called this &quot;details on demand&quot; [1]).   </p>
+  <span class="HH2">Example:</span> a real estate map with symbols representing houses for sale.  The user clicks on a symbol to get details of the listing.  
+  <p class="bodytext">Drill down is useful in almost all visualizations.  In cases where there are many symbols on a screen it is important that symbols represent as much information scent as possible  otherwise the analyst may have to drill down and view a great deal of irrelevant information. Scent consists of a set of graphical attributes or words that represent a summary of the information referenced by the symbol. </p>
+  <table width="759" border="1">
+    <caption class="HH2">
+    The Drill Down Process 
+    </caption>
+    <tr>
+      <td width="749" height="175"><em>Display Environment: </em>Symbols  representing data entities, some kind of selection device.        
+        <ol><li><em>Conduct a visual search, based on  information scent, for most task relevant symbol.</em></li>
+          <li><em>Select symbol. </em></li>
+          <li><em>Computer displays detailed information</em><em>. Repeat from 1 as  task demands.</em></li>
+      </ol></td>
+    </tr>
+  </table>
+  <p class="bodytext">The marking of previously visited symbols can be done either mentally or by using a cognitive externalization, such as checking off symbols that failed to yield useful information. </p>
+  <p class="HH1">Fundamental Limits on Drill Down </p>
+  <p>Searching for information by drilling down has a fundamental limitation that is set out formally in information foraging theory [2]. Consider that the data model is heirarchically structured data and the search  involves following information scent down a multi-way branching tree. Information scent is almost always less than perfect and it has been shown that even with quite high propability that information scent is accurate (e.g. p=0.7) the search cost rise exponentially with the depth of the search tree. This is set out formally in [2]. The branching factor is also a critical variable.</p>
+  <p>The equations are complex, but in simple terms this means that finding information via heirarchical drill down will be extremely inefficient for high depth searches with high branching factors. This is why key word searches are to be preferred over drill down for large amounts of data. In the case where there is a 70% chance that information scent is an accurate predictor, a 5 level heirarchy will only result in the required information being found 16% of the time by following the highest scent symbol at each level. In other cases much longer searches through mostly irrelevant information nodes will result. </p>
+  <p><span class="HH1">The drill down epistemic action cost hierarchy</span></p>
+  <p><span class="bodytext">A key design issue in supporting drill down is choosing the method for revealing additional information. The following is a sequence from low cognitive cost to high cognitive cost. The low cost operations are relatively effortless, but generally only show a little information.  As a general principle,  lower cost methods are preferred over high cost methods, but only if they reveal information adequate to the task.</span></p>
+  <p><span class="HH2">1) Eye fixation:</span> The most natural way of obtaining more information about a visible entity is to fixate it. This causes the object to be imaged on the fovea where more detail may be seen, if it is available. Eye fixation is not normally considered a drill down operation;however, eye fixation is an epistemic action to obtain information just as much as clicking on an object.   Eye fixations can allow for drill down operations executed at a rate of 3/sec.   </p>
+   <p><span class="HH2">2) Mouse hover:</span> With a mouse hover query (or touch), simply moving a cursor over a symbol causes additional information to be revealed  without significant lag.  The information is displayed in a compact form as near as possible to the symbol.  Typically with a hover query only a single set of drill down attributes is visible at a time.  Hover queries can allow for drill operations executed at a rate of 1/sec.   </p>
+   <p><span class="HH2">3) Click to open, Click to close:</span> Click to open causes an information panel to be revealed showing additional attributes of the entity. This can have the form of a small linked rectangle, embedded in the display, or it can be displayed in a side panel. Normally it takes an additional click to close the drill down panel which allows for multiple panels to be simultaneously showed. </p>
+   <p>A  perceptual issue with click to open is that the newly openend panel may obscure the base visualization. If the panel  is placed to the side, then a method should be provided for linking the drill down information to the selected symbol. This is important if several drill down panels can be open simulaneously. </p>
+   <p>A variant on click to close is keeping only the last n panels open (n &gt;= 1). This removes the need to close panels. </p>
+   <p><span class="HH2">4) Click to open new display window, replacing previous window: </span>The most disruptive form of drill down is having a new screen containing the drill down information, replace the original screen.  Closing the new screen or using a back button restores the original display. </p>
+   <span class="HH2">Perceptual and cognitive issues.</span> Replacing the original screen with a new display window method causes a loss of context and this places a burden on working memory if the new information must be related to what was previously seen. The problem will be worse if many drill down operations are carried out in sequence. Working memory limitations can make it necessary to redo drill down operations many times. 
+   <p><span class="HH2">Related VTDPs:</span> <a href="../VTDP_web_pages/VTDPAggregation.html">VTDP Drill Down-Close Out with Hierarchical Aggregation</a> is a form of drill down where data has been aggregated in a heirarchial structure.   </p>
+   <p>There is a fine distinction between drilling down on an entity and following links from an entity.  For example, if the entity represents a person, drilling down might reveal where they live where they have been, etc. But we might also ask who they know andt his involves following links to other entities (<a href="../VTDP_web_pages/VTDP_SeedAndGrow.htm">VTDP Seed then Grow</a>). </p>
+   <span class="HH1">References</span>
+   <p class="bodytext">[1] Shneiderman, B. (1996) The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. In Proceedings of the IEEE Symposium on Visual Languages, pages 336-343, Washington. IEEE Computer Society Press.</p>
+   <p class="bodytext">[2] Pirolli, P. (2009) Information Foraging Theory. Oxford Series in Human Technology Interaction. </p>
+   <p class="bodytext">[3] Hogg, T and Huberman, B.A. (1987) Artificial Intelligence and large scal computation: A physics perspective. Pyysics Reports, 156, 227-310. </p>
+   <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

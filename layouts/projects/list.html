@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<div class="home">
+ 
+  
+    <div class="row pack">
+
+        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "projects") }}
+        {{ range (where .Site.RegularPages "Section" "projects") }}   
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 card">
+              {{ if .Params.Redirect }}
+              <a href="{{ .Params.Redirect }}" class="index-anchor">    
+              {{ else }}
+              <a href="{{ .Permalink }}" class="index-anchor">    
+              {{ end }}
+                <div class="panel panel-default">
+                  
+                  {{ if .Params.img }}
+                  {{ with .Resources.Match .Params.img }}
+                    {{ range . }}
+                      <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+                    {{ end }}
+                  {{ end }}
+                  {{ else }}
+                  <img width="100%" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
+                  {{ end }}
+                  
+                  <div class="panel-body">
+                    <h3 class="panel-title pull-left">{{ .Title }}</h3></span>
+                  </div>
+                </div>
+                </a>
+            </div>
+        
+          {{ end }}
+
+    </div> 
+    
+
+</div>
+
+{{ end }}

@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="row" style="display: flex; justify-content: center;">
+<div class="col-md-10">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ .Params.Name }}</h1>
+            
+            <p>{{ with .Params.Primary_Role }}<span class="post-meta" itemprop="role">{{ . }}</span>{{ end }} <br>
+            {{ if .Params.Secondary_Role }} {{ with .Params.Secondary_Role }}<span class="post-meta" itemprop="role">{{ . }}</span>{{ end }} <br> {{ end }}
+            {{ if .Params.Office }} {{ with .Params.Office }}<span class="post-meta" itemprop="office">Office {{ . }}</span>{{ end }} <br> {{ end }}
+            {{ with .Params.email }}<span class="post-meta" itemprop="email"><a href="mailto:{{ . }}">{{ . }}</a></span>{{ end }}</p>
+                 
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+
+            <div class="post-img" style="float: right; padding: 10px;">
+              {{ if .Params.featureimg }}
+              {{ with .Resources.Match .Params.featureimg }}
+                {{ range . }}
+                  <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+                {{ end }}
+              {{ end }}
+              {{ else if .Params.img }}
+                {{ with .Resources.Match .Params.img }}
+                {{ range . }}
+                  <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+                {{ end }}
+                {{ end }}
+              {{ end }}
+            </div>
+
+            {{ .Content }}
+          </div>
+
+    </article>
+</div>
+
+</div>
+
+{{ end }}

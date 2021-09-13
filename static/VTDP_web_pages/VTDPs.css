@@ -1,0 +1,28 @@
+.body12 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+}
+.Title{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 26px;
+	color: #990033;
+}
+.HH1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #990000;
+	font-weight: bold;
+}
+.body10 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10px;
+}
+.HH2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #990000;
+}
+.tiny {
+	font-size: 9px;
+}

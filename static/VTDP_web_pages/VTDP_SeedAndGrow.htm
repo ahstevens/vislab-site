@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Seed then Grow</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+ <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Seed then Grow </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">Often a data analyst starts with a particular seed of information and then begins to gather related information. Each additional information nugget may lead to further expansion of an information tree or network. This has been called &quot;Start with what you know, then grow&quot; [1]. </p>
+  <p><span class="HH2">Example 1: </span>Law is often based on precedents and legal researchers must  follow chains of  citations to discover rulings on similar cases. These data bases can be large. The researcher may start with a particular case and trace out a citation chain either forward or backwards to find related cases.    </p>
+  <p><span class="HH2">Example 2: </span>In law enforcement, criminal organizations can be discovered by starting with an individual and then determining their associates. The associates of those associates may also be examined, and so on. </p>
+  <table width="759" border="1">
+    <caption class="HH2">
+      An overview of the process of seed then grow 
+    </caption>
+    <tr>
+      <td width="749"><em>Display environment: Data entities are represented as nodes.  Links between them are represented as lines. </em>        <ol>
+        <li><em>A node is added to the display space representing an entity. </em></li>
+            <li><em>A mouse click epistemic action causes the system to search for related facts. These are displayed on the screen with lines linking them to the original node. </em></li>
+            <li><em>The analyst visually searches the added nodes for information scene based on the information scent.  If visual information scent is inadequate, apply VTDP drill down before proceeding. </em></li>
+            <li><em>Nodes that appear unrelated are deleted (or hidden). </em></li>
+            <li><em> For nodes that appear to be task relevant repeat from 2. </em><em> </em></li>
+      </ol></td></tr>
+  </table>
+ 
+  <p class="bodytext">&nbsp;</p>
+  <p class="HH1">Implementation: A left to right tree</p>
+  <p>The most basic implementation is a simple click and expand, with a box to support node closure. The path to the root reveals the lineage of a particular piece of information. </p>
+  <p class="bodytext"><img src="Images/image002.jpg" width="506" height="287" /></p>
+  <p class="bodytext">http://hcil2.cs.umd.edu/trs/2005-23/2005-23.html</p>
+  <p><span class="HH2">Data Guideline: </span>In its simple form this method will work best with problem sets where node degree &lt; 30. In other words, expanding a node should result in fewer than 30 choices. </p>
+  <p><span class="HH2">Problem Guideline:</span> Avaoid long left to right chains which will move off screen and require scrolling, leading to cognitive inefficiencies where it is critical to perceive the path to the root.    </p>
+  <p><span class="HH2">Visual Scent Guideline:</span> Maximize the visual coding of variables if users will work extensively with the system and can be expected to learn the symbol system, or where already learned visual symbols exist. Otherwise coding using words will often be the best option. </p>
+  <p class="HH2">The High Degree Node Problem  </p>
+  <p class="bodytext">The most common problem with the seed then grow approach is that of too many links. In graph theoretic terms these are called high degree nodes. In many networks there may be thousands of connections for a single node. For example, the clients of a bank. It is not useful to click on a bank node and for customers to appear. The problem of deleting irrelevant nodes will hugely reduce the efficiency of the process. </p>
+  <span class="HH1">Implementation: Tree with Fisheye View to Support Larger Trees </span>
+  <p class="bodytext">Although the example below, from [2], is not a see then grow application, it nicely illustrates how a fisheye view can be applied to make  large horizontally laid out trees accessable. </p>
+  <p class="bodytext"><img src="Images/MunznerTreeJuxtaposer.png" alt="MunznerFisheyeTree" width="492" height="486" /></p>
+  <p class="bodytext">&nbsp;</p>
+  <span class="HH1">Implementation: Network with Degree of Relevance </span>
+  <p class="bodytext">The VTDP seed then grow can also be used with a nework, rather than a tree. The example below used the VTDP Degree of Relevance method. The computer expands using nodes that are computed to be most relevant to the node selected [3]. </p>
+  <p class="bodytext"><img src="Images/vanHamPerer.png" alt="vanHamPerer" width="568" height="448" /> </p>
+  <span class="HH1">References</span>
+  <ol>
+    <li>Heer, J., and Boyd, D. (2005) Vizster: Visualizating online social networks. Proc. IEEE Information Visualization. 32-39. </li>
+    <li>Munzner, T., Guimbretière, F.,  Tasiran, S., Zhang, L., and Zhou. Y. TreeJuxtaposer: Scalable Tree Comparison using Focus+Context with Guaranteed Visibility.    SIGGRAPH 2003,  453-462. </li>
+    <li>Van Ham, F., &amp; Perer, A. (2009). “Search, Show Context, Expand on Demand”: Supporting Large Graph Exploration with Degree-of-Interest. Visualization and Computer Graphics, IEEE Transactions on, 15(6), 953-960.</li>
+  </ol>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

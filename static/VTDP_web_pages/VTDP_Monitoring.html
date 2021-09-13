@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Monitoring</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body> 
+ <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">VTDP: Monitoring </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p class="bodytext">The term monitoring is used for a set of tasks where an operator is responsible for maintaining a level of awareness of some system, or situation.  Monitoring has been studied extensively for the design of control room displays, used with power distribution networks, factory processes, and controls for complex vehicles such as aircraft. Monitoring panels called information dashboards are increasingly used in business.  The use of monitoring in visual analytics may require a more flexible, dynamic approach since what is being monitored will more frequently than for these other applications. </p>
+  <p><span class="HH2">Example 1: </span>A business executive uses  a dashboard display check recent sales figures by region and aspects of the  supply pipeline.    </p>
+  <p><span class="HH2">Example 2: </span>A technician in a  chemical factor is required to monitor the ongoing state of flow through pipes,  pressure levels and various other process parameters to ensure that the plant  is performing within defined parameters and that there are no warning signs. </p>
+  <p><span class="HH2">Example 3: </span>An analyst responsible for monitoring the impact of Hollywood productions using Twitter, is expected to report on adverse publicity memes, as well as total volumes and global trends.    </p>
+  
+  <table width="759" border="1">
+    <caption class="HH2">
+      An overview of the monitoring process
+    </caption>
+    <tr>
+      <td width="749"><em>Display environment: A monitoring panel with various graphical entitites reprenting system variables. </em>        <ol>
+        <li><em>Set up a cognitive self interrupt schedule</em><em>.</em></li>
+            <li><em>When an internal  cognitive interrupt occurs, break off from other tasks, save mental state of  other tasks. </em><em>Load monitoring  cognitive strategies, and task relevant visual queries </em><em>. </em></li>
+            <li>S<em>can display with eye  movements</em><em> executing visual queries appropriate to each display element . </em></li>
+            <li><em>For actionable patterns found, take required action . </em></li>
+            <li><em> If no actionable items, partially save cognitive monitoring information and return to other tasks. </em><em></em></li>
+      </ol></td></tr>
+  </table>
+ 
+  <p class="bodytext">&nbsp;</p>
+  <p class="HH1">Characteristics of Monitoring</p>
+  <p><span class="HH2">Dual task and multi-task: </span> Typically monitoring is only one of the responsibilities of a system operator, executive, or analyst.  In their monitoring activity analysts are expected to maintain an ongoing alertness for new developments, or critical situations, but they typically have an ongoing workload of other tasks.  Because of this monitoring is intermittent and cognitive costs are incurred during task switching [1].
+<p><span class="HH2">Exceptions: </span> Changes to the status quo are often especially important in monitoring. Sometimes there are designated trigger values that require specific actions. For example, a specified drop in pulse rate or blood pressure in a patient being monitored may result in an alarm requiring actions by medical staff.  
+<p><span class="HH2">Trends and emerging patterns: </span>Operators and analysts are also expected to be aware of general trends usually of a number of variables, and also emergent patterns in the data. 
+<p><span class="HH2">Links to actions: </span> The goal of monitoring is to enable people to take appropriate actions as a result of exceptions, trends and emerging patterns. Taking action is another form of task switching with attendant cogntive costs. 
+<p><span class="HH2">Vigilance:</span> Certain kinds of monitoring constitute what are called vigilance tasks. These are prolonged, monotonous, visual search tasks where a rare and often weak signal may have disastrous consequences if missed.
+</ul>
+  <p class="bodytext"><img src="Images/MonitoringSystemSchema.jpg" width="516" height="240" /></p>
+  <span class="HH1">Displays and Interactions:  </span>
+  <p>In a discussion of the requirements for business information dashboards Few [2] argues strongly that they should be single screens, with critical visible to facilitate the monitoring task. In other words interaction should not be required to access monitored variables.</p>
+  <p><span class="HH2">Display Guideline: </span>Provide a single unobscured screen to support essential monitoring tasks. Interaction should not be required to get at key information. </p>
+  <p> Monitoring in the analytics world is a different case, because the switch to analysis is likely to be essential. In analytics there are commonly three major types on interaction with the system as illustrated above. Typically analytics is based on a set of analyst customized filters to pull out information of interest. As analytics tasks evolve these filters must be changed to meet new requirements, althought the changes must be infrequent enough to allow a time series to be accumulated (so that noramative trends exist against which exceptions can be tested). Montitoring itself will be much more fequent, occuring at intervals from a few minutes to a few hours. Of intermediate frequency is a switch to analysys. Supporting this in a fluid way is essential in analytics because only minimal informatin about emergent trends will be typically available on the screen and this may be of low quality, necessitation drill down operations on many pieces of information for everything that is actionable. The three kinds of interaction are summarized in the process diagram shown above. </p>
+  <p><span class="HH2">Interaction Guideline  :</span> For analytics monitoring support rapid transitions to analytics mode (Drill down VTDP). Ideally this should not resulting in key monitoring elements being hidden. A second screen for more intense analytics is desirable. </p>
+  <p><span class="HH2">Visual Scent Guideline:</span> Maximize the visual coding of variables if users will work extensively with the system and can be expected to learn the symbol system, or where already learned visual symbols exist. For fixed control room displays it is reasonable for users to learn the semanitics of every dial, analytics Otherwise coding using words will often be the best option.</p>
+  <p><span class="HH2">Visual Queries Regarding Change: </span>Optimize graphical displays for visual queries regarding change and trends in underlying data. Time series representations are often important but they must be carefully designed to show critical threshold variables.</p>
+  <p><span class="HH2">User interrupt Guideline:</span> Research shows that people are more sensitive to movement in the periphery of vision than to, for example color. This means that using motion or blinking for alerts is usually a good solution [3]. </p>
+  <p class="bodytext"><span class="HH1">References</span> </p>
+  <ol><li> Trafton, J. G., Altmann, E. M., Brock, D. P., &amp; Mintz,  F. E. (2003). Preparing to resume an interrupted task: Effects of prospective  goal encoding and retrospective rehearsal. <em>International Journal of  Human-Computer Studies</em>, 58(5), 583-603.</li>
+    <li>Few, S. (2013) <em>Information Dashboard Design</em>. Analytics  Press.	 </li>
+    <li>
+      <div id="gs_cit1" tabindex="0">Bartram, L., Ware, C., &amp; Calvert,   T. (2003). Moticons:: detection, distraction and task. <em>International Journal   of Human-Computer Studies</em>, <em>58</em>(5), 515-545.</div>
+      .</li>
+  </ol>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

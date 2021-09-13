@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>VTDP Design Process</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="file:///E|/VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("../VTDPs.css");
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title">Applying Visual Thinking Design Patterns in Practice </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p class="bodytext">&nbsp;</p>
+  <p>VTDPs are  intended as tools for the designer to use in reasoning about visualization  design.  The following paragraphs   sketch out the design process as a series of steps. In most cases these steps  should be part of a spiral design methodology, with multiple iterations.</p>
+  <span class="HH1">Step 1: High level cognitive task analysis  </span>
+  <p>At the start of the design process the  team members must establish, in a general way, the problem to be solved by the  final product. Initially, the description should not specify the implementation  method so as not to prejudge the solution. Refinement will come later.</p>
+  <span class="HH1">Step 2: Data inventory</span>
+  <p>It is important to know early on in the  process what data is available that bears on the cognitive goals, what is  readily accessible, and what is likely to be accessible only with time  delays.  Sometimes confidentiality can be  a stumbling block.  Both the structure of the  data and the semantics will be important in defining the visualization.  Data can be enormously varied  in its properties, but the following list contains some of the attributes that  are likely to appear in any inventory.</p>
+  <ul>
+    <li>Quantity:   Very big data requires different approaches beyond what applies to  medium or small data.  </li>
+    <li>Structure:   E.g. hierarchical, map layers, network, multi-dimensional discreet.</li>
+    <li>Time to access:   Sometimes real-time or near real-time is critical.</li>
+    <li>Ease of access:   Some data is readily accessible, however, it is also common for data to require new  infrastructure, have explicit costs, or have  security issues.</li>
+    <li>Interrelationships and interdependencies.</li>
+    <li>Quality and reliability.</li>
+    <li>Potential for derived data products – processing  infrastructure.</li>
+  </ul>
+  <p>The data inventory process will almost  certainly start to blend into step 3, task refinement, because data is only  important as it relates to task requirements.</p>
+  <span class="HH1">Step 3: Refinement of cognitive task  requirements</span>
+  <p>As the data is understood, the set of  tasks can be refined. Knowing the specifics of particular data objects will  suggest additional questions that may be addressed.  As a generally strategy it is useful to work  top down, breaking down the overarching goal into analytic questions about <em>who, what, where, when and how</em>.   It is also important to  establish interdependencies between tasks, such as the order in which they must  be performed. At some point specific computer based tools may be invoked but  this should be delayed as long as possible.  <br />
+    Only part of an analytic problem is  likely to be amenable to solutions that use visualization and it is important  to divide the problem into aspects that can use visual thinking and aspects  that use other forms of thinking or computation.  The following  aspects of a problem suggest  a visualization solution.  </p>
+  <ul>
+    <li>There must be a way of transforming the problem so that solutions  are discoverable through a visual pattern search.</li>
+    <li>The task should not be so repetitive and standardized that an  automatic computer pattern search is more appropriate.</li>
+  </ul>
+  <span class="HH1">Step 4: Identification of VTDPs and  visualizations that can bear on the task</span>
+  <p>This step is the key creative stage in  the design process. It is best led by an experienced designer who knows both  the types and nature of visualization and understands the VTDPs that can be  used to make them cognitively efficient. <br />
+    The process starts with analytic questions about <em>who, what, when, where and how</em> and matches these to appropriate  VTDPs. <a href="FromTaskToPattern.htm">(more) </a></p>
+  <span class="HH1">Step 5: Design decision rules  </span>
+  <p>Since VTDPs incorporate rules regarding  when they are most effective, it is possible to construct a set of rules for  visualization problems that provide guidelines for when the different methods  can be applied.  For example, we have  constructed the system of rules below regarding techniques that can be applied  to the visualization of graphs as node link diagrams.</p>
+  <ul>
+    <li>Small graph (&lt;30 nodes) static representation</li>
+    <li>Medium graph (&gt;30,&lt;600) degree of relevance VTDP</li>
+    <li>Large Graph (&gt;600 &lt; 5m)   use dynamic queries VTDP attributes to reduce graph size to get to degree of  relevance VTDP (&lt;600).</li>
+    <li>Very large graph ( &gt;5m) Query by example VTDP may be needed.  Start with example, computer finds similar, user selects to refine query. </li>
+  </ul>
+  <span class="HH1">Step 6: Prototype development</span>
+  <p>In order to test the cognitive  affordances of design alternatives, it is necessary to have some form of  prototype.  This can be design sketches  of key screens, or a rapidly developed working application demonstrating key design ideas but lacking full functionality. The purpose is to provide a  basis for reasoning about cognitive efficiency when the visualization is applied  to the cognitive tasks identified in step 3.</p>
+  <span class="HH1">Step 7: Evaluation Through cognitive walkthrough</span>
+  <p>The cognitive walkthrough should focus  on critical or frequent tasks to ensure that the cognitive execution will be  efficient using the VTDPs.  Small groups  should talk through the steps, attempting to identify bottlenecks, such as  unreasonable memory load, or instances where repetitive work can be offloaded  to the computer. It is likely that new cognitive tasks  will emerge during the process and the list of cognitive tasks can be refined;  links between cognitive tasks may be revealed.</p>
+  <p>VTDPs can be used in the evaluation process simply by condidering if each in turn is applicable to the set of cognitive tasks, and the data to be visualizatized. <a href="CriteriaEval.htm">(more)</a></p>
+  <span class="HH1">Step 8: Alpha and beta products </span>
+  <p>The final stages of design should apply  the common techniques of developing alpha and beta product versions that can be  tested and refined through use in problem solving. </p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

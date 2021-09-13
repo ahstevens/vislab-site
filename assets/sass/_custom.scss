@@ -1,0 +1,162 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+body {
+	background-color: $background-color;
+}
+
+footer {
+	color: $text-color;
+}
+
+a {
+	color: $brand-color-3;
+}
+
+a:hover{
+	color: $brand-color-3;
+}
+
+p,
+dt,
+dd,
+li {
+	color: $text-color;
+}
+
+.post-meta {
+	color: $text-color;
+	font-weight: bold;
+}
+
+.recent {
+	background-color: $brand-color-4;
+}
+
+.recent p {
+	margin: 0px;
+}
+
+h1.post-title {
+	color: $brand-color-2;
+	text-decoration: none;	
+	text-shadow: 2px 2px 2px black;
+}
+
+h2,
+h3,
+h4,
+h5,
+h5 em,
+li::marker {
+	color: $text-color;
+	text-shadow: 2px 2px 2px black;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: $text-color;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: $brand-color-3;
+}
+
+div.navbar-header a.navbar-brand {
+  display: contents;
+}
+
+div.navbar-logo {
+	position: relative;
+	text-align: center;
+	max-width: 100%;
+	float: left;
+}
+
+a.navbar-brand img {
+	max-height: 54px;
+}
+
+div.navbar-logo-text>a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	//font-family: 'Times New Roman', Times, serif;
+	font-size: 14pt;
+	line-height: 1;
+	font-weight: bold;
+	color: $brand-color-3;
+	text-shadow: 3px 3px 3px black;
+	text-decoration: none;
+	width: 100%;
+	text-overflow: unset;
+}
+
+div.panel-body {
+	color: $brand-color-4;
+}
+
+ul.pagination li a,
+ul.pagination li span {
+	background-color: $brand-color-3;
+}
+
+ul.pagination li.active span {
+	background-color: $brand-color-4;
+}
+
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+    z-index: 2;
+    color: #ffffff;
+    background-color: $brand-color-4;
+    border-color: $brand-color-4;
+}
+
+div.post-content>ul>li>p {
+	margin: 0;
+}
+
+.panel-body {
+	background-color: $brand-color-4;
+}
+
+.panel-body small {
+	color: $text-color;
+}
+
+.panel-title {
+	color: $text-color;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: transparent;
+    color: $brand-color-3;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li,
+.dropdown-menu {
+	background-color: $background-color;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $brand-color-3;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    background-color: $brand-color;
+	color: $text-color;
+}
+
+.homepage-header {
+	text-align: center;
+	color: $brand-color-3;
+	text-shadow: 3px 3px 3px black;
+}
+
+.homepage-header>.subtitle {
+	color: $brand-color-3;
+}

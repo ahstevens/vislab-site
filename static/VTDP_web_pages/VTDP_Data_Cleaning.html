@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Visual Queries</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="Title"> VTDP: Data Cleaning </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p>Much scientific and engineering data contains flaws and these can be due to a variety of  causes. Sometimes sensors malfunction, and return erroneous values. Sometimes, the sensors are accurate but they record something that is not wanted. If the erroneous values can be definitively characterized, an automatic filter can be created to find them, but often the best that can be done is that the automatic filter flags values that are likely to be flawed. A human operator is required to make to the actual decision. </p>
+  <p><span class="HH2">Example: </span>Modern seafloor mapping is done using multibeam sonars. These measure an array of depths from a single sonar 'ping'. The problem is that these sonars also sense fish and seaweed in the water and problems can occur with the sensors. Because of this automatic cleaning methods are not always reliable and human operators must be involved in the process of deciding if depth soundings are valid or not. The task is important with potentially serious conscquences; for example a data point might be removed that  corresponds to a steel mast of a wreck and a chart constructed that fails to show the hazard [1]. </p>
+  <p align="center"><img src="Images/Cleaning.png" width="1170" height="736" /></p>
+  <p align="center">The CARIS hydrographic data cleaning system. The yellow box indicates a set of operator selected depth soundings that will be flagged as 'bad'. </p>
+  <p>The general principle of a visual data editor is to allow technicians to clean data as quickly and efficiently as possible. Some of the ways of achieving this are. </p>
+  <ol>
+    <li>To provide a view such that outliers data points stand out clearly.</li>
+    <li> Provide an editing tool, typically an editing box or a lasso, enabling many soundings to be selected and removed with a single click. </li>
+    <li>Run an algorithm to automatically detect likely cases of bad data. These are then highlighted in some way, and the operator's task is to push a button to delete set of detected and highlighted data points. </li>
+  </ol>
+  <table width="759" border="1">
+    <caption class="HH2">
+    Visual Data Cleaning Process
+    </caption>
+    
+    
+    <tr>
+      <td width="749" height="175"><ol><em>Display Environment: </em>A graphic display containing elements representing data. </p>
+        <ol>
+          <li><em> Data points are graphically displayed in such a way that potential bad data points stand out clearly. </em></li>
+          <li>In some systems  candidate 'bad' data points are automatically flagged by a computer algorithm. These flags are visually displayed. </li>
+          <li><em>A trained operator assesses these data points based on knowledge of the data acquisition system and mentaly categorizes them as good or bad. </em></li>
+          <li> In certain cases the operator executes an epistemic action to drill down and find additional information regarding particular points. </li>
+          <li><em>The operator selects the bad data points and hits a 'delete' button, externalizing the decision. </em></li>
+          <li><em>The operator executes an action to advance to the next set of points to be cleaned. </em></li>
+          <li><em>Repeat from 2 as needed.</em><br />
+          </li>
+        </ol></td>
+      </tr>
+  </table>
+  <p>The above is the bare bones of the visual thinking process. In some implementations the loop is a simple <em>look, select, delete, and advance</em>, process. In others it can become extremely elaborate, depending on the task and the amount of additional information that can be brought in to bear on the problem </p>
+  <p><span class="HH2">Implementation Guideline: </span>Implement to optimize throughput, while maintaining quality. Data cleaning systems have an advantage over many visual thinking systems in that performance can be rigorously assessed. In the case of data cleaning, productivity can be measured as can qualilty. </p>
+  <p><span class="HH2">Implementation Guideline: </span>Data cleaning is usually a routine and monotonous task and because of this errors can occur due to operator fatigue. Methods for countering this include having other operators or supervisors check the work. </p>
+  <p><span class="HH2">Implementation Guideline: </span>It is often useful to provide support for systematic and complete processing. Without this operators may inadvertantly miss sections of the data. In addition this can be useful to ensure that sections of data are not inadvertantly processed more than once. </p>
+  <p>[1] Ware, C., Slipp, L., Wong, K. W., Nickerson, B., Wells, D. E., Lee, Y. C., ... &amp; Costello, G. (1993). A system for cleaning high volume bathymetry.<em>International Hydrographic Review</em>, <em>69</em>, 77-77.</p>
+  <p class="bodytext">&nbsp;</p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

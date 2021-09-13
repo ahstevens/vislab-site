@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Preliminary Data Assessment</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../VDTPs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+@import url("VTDPs.css");
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" align="left" valign="top"><!-- TemplateBeginEditable name="menu" --><!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="left" valign="top"><table width="@@(width)@@" border="0" align="left" cellpadding="0" id="CONTENT">
+      <tr>
+        <td width="794" align="left" valign="top"><!-- TemplateBeginEditable name="PageTitle" class="Title" -->
+          <div align="center" class="pagetitle">VTDP: Preliminary Data Assessment and Wrangling </div>
+        <!-- TemplateEndEditable --><!-- TemplateBeginEditable name="body" -->
+  <p>Data assessment occurs early in the process of designing and  building a new visualization, typically soon after an analytic problem is  posed. Usually a new analytic task is first proposed in a very general  way,  but it is only once a source of  data is identified and it characteristics inventoried that more precise and  meaningful analytic questions can be develope.   Sometimes data assessment will lead to the project being dropped. More  often, once the nature of the data is known more avenues for analysis are  exposed.</p>
+  <span class="HH2">Example</span>: Initial question: can social media tell us about a  flu epidemic?  Data assessment on Twitter  data shows, that is publically available, although large amount come at a significant  cols. It also reveals that a certain percentage of tweets are georeferenced and  that there are approximately 200 million active users world wide.
+  <p class="bodytext">Some of the basic questions about the nature of a data set are the following. </p>
+  <ol>
+    <li>How big is it? </li>
+    <li>How many attributes are there and what are their characteristics  (quantitiative or categorical)? </li>
+    <li>Can we extract a significantly smaller sub-set to meet our needs? </li>
+    <li>How much missing data is there? </li>
+    <li>Does it have geospatial attributes? </li>
+    <li>Does it have temporal attributes? </li>
+    <li>How is it distributed? Does it have extreme outliers?  For each categorical attribute how many categories are there? </li>
+    <li>Can it be characterized as a linked network?  If so what is the distribution of node degrees?</li>
+  </ol>
+  <p class="bodytext">Data wrangling is the process of converting data from its raw form into a format that can be ingested by data processing tools [1]. Visualization can be a useful part of data wrangling, especially as a tool in appreciating issues relating to distribution of values. Below is an image from TukeyPlot TM an Oculus tool that summarizes data attributes using a form of one dimensional heat map.  This tool also has the ability to zoom in continuously to resolve more detail. Visualizations of two dimensional distributions can also be valuable. </p>
+  <p class="bodytext"><img src="Images/Oculus_Assess_1.jpg" width="750" height="435" /></p>
+  <p class="bodytext">Part of an Oculus Tukey Plot file showing the distribution of data values. </p>
+  <p class="bodytext"><img src="Images/Oculus_2D.jpg" width="720" height="337" /></p>
+  <p class="bodytext">An Oculus Tukey Plot showing pairwise distributions of variables.</p>
+  <p class="bodytext"><img src="Images/Kandel.jpg" width="900" height="335" />From [2]: Map assessing 2D outliers in a binned scatter plot.   In this case the data show movies with a  high worldwide gross but low US gross. The plot confirms that these movies were  released outside of the US.</p>
+  <p>Data wrangling of raw network data is still in its infancy, but  [3] provides some approaches to the problem.</p>
+  <p>&nbsp;</p>
+  <p><em>Work needed here on the cognitive processes involved in data wrangling </em></p>
+  <p class="HH1">References  </p>
+  <ol>
+    <li>Kandel, S., Paepcke, A., Hellerstein, J., &amp; Heer, J. (2011, M). Wrangler: Interactive visual specification of data transformation scripts. ACM CHI, 2011, 3363-3372. </li>
+    <li>Kandel, S., Parikh, R., Paepcke, A., Hellerstein, J. M., &amp; Heer, J. (2012). Profiler: Integrated statistical analysis and visualization for data quality assessment. In Proceedings of the International Working Conference on Advanced Visual Interfaces. 547-554. ACM. </li>
+    <li>Heer, J. and Perer, A. (2011) Orion: A system for modeling, transformation and visualization of multidimensional heterogeneous networks. In Visual Analytics Science and Technology (VAST), 51-60. </li>
+  </ol>
+  <p class="bodytext">&nbsp; </p>
+        <!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="19" colspan="9" align="center" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="221" height="58" align="center" valign="top">&nbsp;</td>
+    <td width="55" align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext"><span class="tiny">Visual Thinking Design Patterns are partially funded by the DARPA XDAPA project </span></td>
+    <td width="62" align="center" valign="top">&nbsp;</td>
+    <td width="213" align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td colspan="5" align="center" valign="middle" class="tinytext">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

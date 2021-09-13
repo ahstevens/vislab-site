@@ -1,0 +1,104 @@
+{{ define "main" }}
+
+<div class="people"> 
+  
+  <h3>Faculty</h3>
+
+  <div class="row pack">        
+    {{ range where .Site.RegularPages "Section" "people" }}   
+    {{ if eq .Params.Class "faculty" }}
+      <div class="col-xs-6 col-sm-6 col-md-3">
+        {{ if .Params.Redirect }}
+        <a href="{{ .Params.Redirect }}" class="index-anchor">    
+        {{ else }}
+        <a href="{{ .Permalink }}" class="index-anchor">    
+        {{ end }}
+          <div class="panel panel-default">
+            
+            {{ if .Params.img }}
+              {{ with .Resources.Match .Params.img }}
+                {{ range . }}
+                  <img width="100%" style="padding: 5px;" src="{{ .RelPermalink }}" alt="{{ .Params.Name }}">
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            <div class="panel-body">
+              <h3 class="panel-title pull-left">{{ .Params.Name }}</h3>
+            </div>
+            
+            <div class="panel-body" style="line-height: 1;">
+              <small>{{ .Params.Primary_Role }}</small>
+            </div>
+          </div>
+          </a>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div> 
+
+  <h3>Research Scientists</h3>
+
+  <div class="row pack">        
+    {{ range where .Site.RegularPages "Section" "people" }}
+    {{ if eq .Params.Class "staff" }}
+      <div class="col-xs-6 col-sm-4">
+        <a href="{{ .Permalink }}" class="index-anchor">    
+          <div class="panel panel-default">
+            
+            {{ if .Params.img }}
+              {{ with .Resources.Match .Params.img }}
+                {{ range . }}
+                  <img width="100%" style="padding: 5px;" src="{{ .RelPermalink }}" alt="{{ .Params.Name }}">
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            <div class="panel-body">
+              <h3 class="panel-title pull-left">{{ .Params.Name }}</h3>
+            </div>
+            
+            <div class="panel-body" style="line-height: 1;">
+              <small>{{ .Params.Primary_Role }}</small>
+            </div>
+          </div>
+          </a>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div> 
+
+  <h3>Ph.D. Students</h3>
+
+  <div class="row pack">        
+    {{ range where .Site.RegularPages "Section" "people" }}
+    {{ if eq .Params.Class "phd" }}
+      <div class="col-xs-12">
+        <a href="{{ .Permalink }}" class="index-anchor">    
+          <div class="panel panel-default">
+            
+            {{ if .Params.img }}
+              {{ with .Resources.Match .Params.img }}
+                {{ range . }}
+                  <img width="100%" style="padding: 5px;" src="{{ .RelPermalink }}" alt="{{ .Params.Name }}">
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            <div class="panel-body">
+              <h3 class="panel-title pull-left">{{ .Params.Name }}</h3>
+            </div>
+            
+            <div class="panel-body" style="line-height: 1;">
+              <small>{{ .Params.Primary_Role }}</small>
+            </div>
+          </div>
+          </a>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div> 
+</div>
+</div>
+
+{{ end }}
