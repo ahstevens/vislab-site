@@ -4,7 +4,7 @@ title: "About the VisLab"
 permalink: /about/
 ---
 
-The Data Visualization Research Lab (DVRL) has the goal of carrying out research into advanced interactive visualization. The lab is has a special interest in techniques that can be applied to ocean mapping and ocean technologies in general. There are three broad strategies of research carried out.
+The Data Visualization Research Lab (DVRL) has the goal of carrying out research into advanced interactive visualization. The lab has a special interest in techniques that can be applied to ocean mapping and ocean technologies in general. There are three broad strategies of research carried out.
 
 #### The Science of Data Visualization (experimental semiotics)
 A major part of former lab director Colin Ware’s research has been grounding data visualization in theories of human perception and cognition. This approach provides theories of what makes visualizations effective thinking tools.
