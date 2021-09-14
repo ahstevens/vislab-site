@@ -8,7 +8,7 @@ The VisLab is outfitted with four SteamVR 2.0 Base Stations, turning the entire 
 
 We also have three pairs of SteamVR 1.0 Base Stations to use with our mobile VR demonstration rig and to set up tracked spaces outside of the VisLab, such as our wave tank in the High Bay:
 
-![Wave Tank](wave_tank.webp)  
+![Wave Tank](wave_tank.gif)  
 _Cleaning sonar data in VR on a floating platform with a spatial tracker_
 
 ## Haptic Devices
