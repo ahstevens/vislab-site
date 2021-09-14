@@ -12,15 +12,16 @@ title: "Visualization Displays"
 
 Mixed reality encompasses technology that incorporates the real world and digital content to varying degrees. In virtual reality (VR), a headset covers your entire field of view with high-resolution displays that immerse you in a virtual environment, often paired with tracked controllers or objects that provide six-degree-of-freedom (6DOF) movement: translations and rotations about the x-, y-, and z-axes. Augmented reality (AR) devices are more like a pair of glasses, showing the real world but augmenting it with digital content anchored in the physical space. This technology is very promising for situational awareness and safety of navigation applications, and a significant thrust of our recent research has been in these areas.
 
-#### Virtual Reality Headsets
-- 3x HTC Vive (SteamVR) ![HTC Vive](vive.jpg)
+### Virtual Reality Headsets
+- 1x Valve Index (SteamVR) ![Valve Index](valveindex.jpg)
+- 1x HTC Vive Pro 2 (SteamVR) ![HTC Vive Pro 2](vivepro2.jpg)
 - 1x HTC Vive Pro (SteamVR) ![HTC Vive Pro](vivepro.jpg)
 - 1x HTC Vive Pro Eye (SteamVR) ![HTC Vive Pro Eye](viveproeye.jpg)
-- 1x HTC Vive Pro 2 (SteamVR) ![HTC Vive Pro 2](vivepro2.jpg)
+- 3x HTC Vive (SteamVR) ![HTC Vive](vive.jpg)
 - 1x Lenovo Explorer (WMR/SteamVR) ![Lenovo Explorer](lenovoexplorer.jpeg)
 - 1x Samsung HMD Odyssey+ (WMR/SteamVR) ![Samsung HMD Odyssey+](hmdodysseyplus.jpg)
 
-#### Augmented Reality Headsets
+### Augmented Reality Headsets
 - 1x Microsoft Hololens ![Hololens](hololens.jpeg)
 - 1x Nreal Light Glasses ![Nreal Light Glasses](nreal-light.jpg)
 
