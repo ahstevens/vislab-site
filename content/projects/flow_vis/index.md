@@ -26,7 +26,7 @@ _A Screenshot of the nowCOAST Interface_
 
 ## A Better Weather Display
 
-One of our current projects is aimed at producing a legible weather display that can simultaneously show wind speed and direction, temperature, and atmospheric pressure in a way that is both legible and which shows overall patterns well. This uses different perceptual channels for the different kinds of information. Color for temperature, texture for pressure, and animate streaklets for wind direction. We will shortly be carrying out an empirical evaluation to compare with other methods. This relies on a GPU implementation by Matt Plumlee based on a design by Colin Ware. Learn more [here]({{<ref "/projects/windvis2">}}).
+One of our current projects is aimed at producing a legible weather display that can simultaneously show wind speed and direction, temperature, and atmospheric pressure in a way that is both legible and which shows overall patterns well. This uses different perceptual channels for the different kinds of information. Color for temperature, texture for pressure, and animate streaklets for wind direction. We will shortly be carrying out an empirical evaluation to compare with other methods. This relies on a GPU implementation by Matt Plumlee based on a design by Colin Ware. Learn more [here](/tools/windvis2).
 
 Fowler, D. and Ware, C. (1989). [Strokes for Representing Univariate Vector Field Maps](/pdfs/FowlerWare89.pdf). Graphics Interface Proceedings, 249-253.
 

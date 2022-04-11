@@ -4,7 +4,7 @@ title: "Visualization Displays"
 
 ## Large Semi-Immersive TV Array
 
-![TV Array](/img/tvarray.png)
+![TV Array](/images/tvarray.png)
 
  Our large-format semi-immersive TV array uses six 82" Samsung UN82RU8000 4K televisions in portrait orientation with 15° angular offsets. The array is driven by two nVidia Quadro RTX 4000 graphics cards and is unified into a single 12960px wide by 3840px tall display through nVidia Mosaic, yielding an approximately 50 megapixel resolution.
 

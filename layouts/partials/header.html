@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-logo">
-        <a class="navbar-brand" href="{{ .Site.BaseURL }}"><img src="/img/Logo_background.png"></a>
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}"><img src="/images/Logo_background.png"></a>
         <div class="navbar-logo-text">
           <a href="{{ .Site.BaseURL }}">The Data Visualization Research Lab</a>
         </div>
@@ -21,23 +21,14 @@
     <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ .Site.BaseURL }}about/">About</a></li>
-        <li><a href="{{ .Site.BaseURL }}projects/">Projects</a></li>
         <li><a href="{{ .Site.BaseURL }}people/">People</a></li>
+        <li><a href="{{ .Site.BaseURL }}projects/">Projects</a></li>
+        <li><a href="{{ .Site.BaseURL }}tools/">Tools</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Equipment <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{ .Site.BaseURL }}equipment/displays/">Visualization Displays</a></li>
             <li><a href="{{ .Site.BaseURL }}equipment/interaction/">Interaction and Input Devices</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ .Site.BaseURL }}projects/unity_tools">Tools for Unity Software</a></li>
-            <li><a href="{{ .Site.BaseURL }}CoralVis">CoralVis Viewer</a></li>
-            <li><a href="{{ .Site.BaseURL }}projects/windvis2">WindVis2</a></li>
-            <li><a href="{{ .Site.BaseURL }}projects/color_sequence_editor">Color Sequence Editor</a></li>
-            <li><a href="http://vislab-ccom.unh.edu/~roland/acoustics/mbes_performance.html">MBES Performance Tool</a></li>
           </ul>
         </li>
       </ul>

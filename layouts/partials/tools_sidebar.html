@@ -1,0 +1,29 @@
+<div class="col-md-4 mt20">
+        <div class="post-img">
+            {{ if .Params.img }}
+            {{ with .Resources.Match .Params.img }}
+              {{ range . }}
+                <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+              {{ end }}
+            {{ end }}
+            {{ else }}
+            <img width="600" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}">
+            {{ end }}
+        </div>
+            
+        
+        <div class="mt10 recent">
+            <h2>Other Tools</h2>        
+             <ul>
+                {{ range (where .Site.RegularPages "Section" "tools") }}
+
+                      <li>
+                      <p><a href="{{ .Permalink }}">{{ .Title }}</a><!--<small>&nbsp;&nbsp;{{ .Date.Format "January 2, 2006" }}</small>--></p>
+                      </li>
+
+                {{ end }}
+              </ul>
+        </div>
+        <br>
+
+</div>

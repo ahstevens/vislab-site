@@ -25,9 +25,12 @@ In our VR point cloud editor, we use the controller in the non-dominant hand to 
 ![Bimanual Interaction](bimanual.gif)  
 _Bimanual direct interaction with point cloud data_
 
-## Point Cloud Tools for Unity Software
+## Point Cloud Tools
 
-We have created a set of tools for the Unity real-time 3D development platform. You can find out more about these tools and download them on the [Unity tools page](/projects/unity_tools).
+We have created a set of tools for and using the Unity real-time 3D development platform. You can find out more about these tools and download them in the [Tools section](/tools).
+
+![XRPCC](/tools/point_cloud_editor/xrpcc.gif)  
+_The XRPCC Virtual Reality Point Cloud editing app_
 
 ### References
 

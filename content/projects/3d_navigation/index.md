@@ -28,7 +28,7 @@ _Center of Workspace widgets_
 
 We have developed a 3D flight script for the Unity 3D development software using a tracked controller. It can be used with a desktop monitor or a virtual reality headset.
 
-You can find the script and instructions here: [3D flight in Unity](/projects/unity_tools)
+You can find the script and instructions here: [3D flight in Unity](/tools/3d_flight)
 
 ### References
 
