@@ -1,6 +1,6 @@
 ---
-title: "3D Flight in Unity with OpenXR"
-weight: 4
+title: "3D Flight Unity Script"
+weight: 40
 img: xrflying.gif
 ---
 

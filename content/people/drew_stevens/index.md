@@ -7,7 +7,7 @@ email: astevens@ccom.unh.edu
 primary_role: Research Scientist II
 class: staff
 img: drew_stevens.jpg
-weight: 3
+weight: 2
 ---
 
 Drew comes from the beautiful city of Vallejo, California in the San Francisco Bay Area. He earned a degree in music composition at UC Davis and worked in the Los Angeles music industry for a couple of years before switching his focus to the sciences. He discovered the practice of data visualization while working as a scientist at an environmental consulting company in Oakland, California, sparking an ongoing interest in understanding how visualizations can help us make sense of our data and better inform our decisions.

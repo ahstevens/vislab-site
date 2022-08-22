@@ -1,16 +1,16 @@
 ---
-title: "BAG Loader Plugin for Unity"
-weight: 3
+title: "BAG Loader Unity Plugin"
+weight: 30
 img: BAGThumb.png
 ---
 
 The BAG Loader Unity plugin, developed by PhD student [Kindrat Beregovyi](/people/kindrat_beregovyi), makes it easy to load georeferenced bathymetry files directly into the Unity engine for use in simulations, virtual reality experiences, and other interactive projects.  It uses the GDAL library, and supports the common .bag (Bathymetric Attributed Grid) file format, as provided from NOAA’s online bathymetric data repositories (e.g. NOAA's [Bathymetric Data Viewer](https://www.ncei.noaa.gov/maps/bathymetry/)), including multi-resolution bag files.
 
-**Download the [BAG Loader Plugin for Unity](BAGLoader_20211116.unitypackage)** *(November 16, 2021)*
+**Download the [BAG Loader Plugin for Unity](/downloads/BAGLoader_20211116.unitypackage)** *(November 16, 2021)*
 
 It is released for general use under the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
 
-{{< webgl name="buildweb2" >}}
+{{< webgl dir="bagloader" name="buildweb2" >}}
 _Click and drag the mouse or use the WASD keys to move the view_
 
 ### Instructions:

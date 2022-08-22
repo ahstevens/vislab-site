@@ -1,13 +1,13 @@
 ---
-title: "Point Cloud Plugin for Unity"
-weight: 2
+title: "Point Cloud Unity Plugin"
+weight: 20
 date: 2021-12-02T14:12:22-05:00
 img: PCCThumb.png
 ---
 
 The Point Cloud Plugin for Unity 
 
-**Download the [Point Cloud Plugin for Unity](PointCloudPlugin_20211220.unitypackage)** *(December 20, 2021)*
+**Download the [Point Cloud Plugin for Unity](/downloads/PointCloudPlugin_20220815.unitypackage)** *(August 15, 2022)*
 
 It is released for general use under the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
 
@@ -16,7 +16,7 @@ _Point cloud files can be loaded into any Unity scene._
 
 ### Instructions:
 
-* Download the plugin file: **[PointCloudPlugin.unitypackage](PointCloudPlugin_20211220.unitypackage)**
+* Download the plugin file: **[PointCloudPlugin.unitypackage](/downloads/PointCloudPlugin_20220815.unitypackage)**
 * Load the plugin into your Unity project by going to Assets -> Import Package -> Custom Package in the menu bar, and then selecting the PointCloudPlugin.unitypackage file you downloaded.
 * Click the “All” button, then the “Import” button.
 * There should now be a “Hydrographic Toolkit” option available on your menu bar. Here you can select the “Point Cloud Manager” tool.

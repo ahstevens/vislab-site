@@ -1,7 +1,7 @@
 ---
 title: WindVis2
 img: WindVis2.gif
-weight: 8
+weight: 80
 ---
 
 WindVis2 is a weather visualization package designed and developed at CCOM UNH to show the latest weather forecast model data from NOAA NCEP (Specifically the North American Mesoscale (NAM) model). It shows a complete 84-hour forecast (in 3-hour time steps), and is updated with new forecast data every six hours. Instructions for downloading the package are given at the foot of this page.
