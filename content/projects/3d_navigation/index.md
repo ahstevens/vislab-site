@@ -2,7 +2,7 @@
 layout: project
 title: 3D Navigation
 img: T_Flying.jpg
-weight: 3
+weight: 4
 ---
 
 How do you get around in 3D virtual environments? Walking is out, even in a full immersive environment. One solution is to map some kind of gesture to the motion of the viewpoint.

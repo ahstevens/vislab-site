@@ -1,6 +1,6 @@
 ---
 title: Point Clouds
-weight: 2
+weight: 3
 draft: false
 img: point_cloud_thumb.png
 ---

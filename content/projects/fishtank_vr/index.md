@@ -2,7 +2,7 @@
 layout: project
 title: Fishtank VR
 img: T_fish_tank_vr.jpg
-weight: 7
+weight: 8
 ---
 
 In the classic form of Virtual Reality (VR), users don a helmet and wear data gloves to get a visual impression that they are in another world. The drawback of this is a form of sensory deprivation—they have no sense of touch and are cutoff from the real world. Fish Tank VR is a term coined by Colin Ware to describe an alternative smaller virtual reality environment (Ware et al. 1993). It involves the creation of a small external virtual workspace external from the user, making it possible to have higher quality visuals, solve many of the problems of stereoscopic display, and have a sense of touch because the workspace is compatible with the spatial range of devices touch as the Phantom™ that produce a high fidelity touch haptic experience. Also, because the virtual world is small and self contained, it can exist within the real world.

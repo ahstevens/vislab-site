@@ -2,7 +2,7 @@
 layout: project
 title: AR Simulator
 img: T_AR_study.jpg
-weight: 5
+weight: 6
 ---
 
 ## Spatially Aware Hand-held Devices and the Boat Simulator

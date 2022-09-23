@@ -2,7 +2,7 @@
 layout: project
 title: Flow Vis
 img: T_FlowVis2D.jpg
-weight: 4
+weight: 5
 ---
 
 Colin Ware is leading a multi-faceted flow visualization project at CCOM. It is aimed at producing both optimized static 2D images of flow patterns and highly interactive 2D and 3D flow visualization tools. Currently, other participants include Daniel Pineo who is investigating perceptual theories relating to flow visualization through a computational model, Matt Plumlee who is working on optimal weather displays, and David Pilar who is developing a better alternative to the wind barb glyph. (Click on the images to see larger versions.)

@@ -2,7 +2,7 @@
 layout: project
 title: Chart of the Future
 img: T_GeoCoastPilot.jpg
-weight: 9
+weight: 10
 ---
 
 ##### _Maximizing Mariner Effectiveness Through Fusion of Marine and Visualization Technologies_

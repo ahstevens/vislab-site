@@ -2,7 +2,7 @@
 layout: project
 title: Stereoscopic Displays
 img: T_Stereo.jpg
-weight: 6
+weight: 7
 ---
 
 Stereopsis referers to our brain's ability to extract depth information from differences between the images in our two eyes. We have developed algorithms to overcome or reduce problems with stereo displays. Before explaining, a brief introduction to stereo vision is needed. Differences between points in images presented to the two eyes are called disparities which the brain can use to infer relative depths between points in the environment. There are a number of problems with stereoscopic computer displays because of the limited depth information available in human perception.
