@@ -14,7 +14,7 @@ Using simple two-handed interactions, you can examine and edit your point clouds
 &nbsp;  
 You can also download a [sample point cloud LAZ file](/downloads/sample.laz) to test with.
 
-You can create and download classifier configuration file using [this page](generator). 
+You can create and download classifier configuration file using [this page](classifier_generator.html). 
 
 - [Instructions](#instructions)
 - [Controller Layouts](#controls)
