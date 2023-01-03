@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <style>
+            * {
+                font-family: system-ui, sans-serif;
+            }
+            textarea {
+                width: 100%;
+            }
+            tbody tr td:first-child input{
+                width: 3em;
+            }
+        </style>
+        <title>VR Point Cloud Editor Classifier File Generator</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Label</th>
+                    <th>Color</th>
+                    <th>Voice Commands (Optional, 1 per line)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" value="0"></td>
+                    <td><input type="text" value="Example"></td>
+                    <td><input type="color" value="#FF0000"></td>
+                    <td><textarea rows="3">example voice command
+another voice command
+a third example voice command
+                    </textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <input id="add_row_button" type="button" value="Add Classifier">
+            <input id="save_button" type="button" value="Save Classifiers">
+        </div>
+        <div style="margin-top: 20px;">
+            Load Classifiers: <input id="load_button" type="file" value="Load Classifiers">
+        </div>
+        <script>
+            var addRowButton = document.querySelector("#add_row_button")
+            addRowButton.addEventListener("click", () => {
+                addRow()
+            })
+
+            var saveButton = document.querySelector("#save_button")
+            saveButton.addEventListener("click", () => {
+                save()
+            })
+
+            var loadButton = document.querySelector("#load_button")
+            loadButton.addEventListener("change", () => {
+                load()
+            })
+
+            function addRow(id, label, color, commands) {
+                var tableBody = document.querySelector("tbody")
+                var newRow = document.createElement("tr")
+
+                if (id == undefined) {
+                    id = Number(tableBody.lastElementChild.children[0].children[0].value) + 1
+                }
+
+                newRow.innerHTML = `<td><input type='text' value='${id}'></td><td><input type='text'></td><td><input type='color'></td><td><textarea rows='3'></textarea></td>`
+                tableBody.append(newRow)
+
+                if (label) {
+                    newRow.children[1].children[0].value = label
+                }
+
+                if (color) {
+                    newRow.children[2].children[0].value = color
+                }
+
+                if (commands && commands.length > 0) {
+                    newRow.children[3].children[0].value = commands.join("\n")
+                }
+            }
+
+            function save() {
+                var classifiers = ["id,label,r,g,b,commands"]
+
+                var rows = document.querySelectorAll("tbody tr")
+                
+                for (var i = 0; i < rows.length; ++i) {
+                    var row = rows[i]
+
+                    var id = row.children[0].children[0].value
+                    
+                    var label = row.children[1].children[0].value.replaceAll('"', '\\\"')
+                    if (label == "") { continue }
+
+                    var color = row.children[2].children[0].value
+                    var r = Number(`0x${color.substring(1,3)}`)
+                    var g = Number(`0x${color.substring(3,5)}`)
+                    var b = Number(`0x${color.substring(5,7)}`)
+                    var commands = row.children[3].children[0].value.trim().replace(/\n/g,'","')
+
+                    var text = `${id},"${label}",${r},${g},${b}`
+                    if (commands != "") {
+                        text += `,"${commands}"`
+                    }
+
+                    classifiers.push(text)
+                }
+
+                var classifierText = classifiers.join("\n")
+                var blob = new Blob([classifierText], {"type": "text/plain"})
+                var url = URL.createObjectURL(blob)
+                var link = document.createElement("a")
+                link.download = "classifiers.conf"
+                link.href = url
+                link.click()
+                URL.revokeObjectURL(url)
+            }
+
+            function load() {
+                var fileReader = new FileReader()
+                fileReader.readAsText(document.querySelector("#load_button").files[0])
+                fileReader.onload = function(readEvent) {
+                    var lines = parse(readEvent.target.result)
+                    lines = lines.slice(1,lines.length)
+
+                    var tableBody = document.querySelector("tbody")
+                    var rows = Array.from(tableBody.children)
+    
+                    for (var row of rows) {
+                        tableBody.removeChild(row)
+                    }
+
+                    for (var line of lines) {
+                        var id = line[0]
+                        var label = line[1]
+                        var r = Number(line[2]).toString(16)
+                        var g = Number(line[3]).toString(16)
+                        var b = Number(line[4]).toString(16)
+                        r = r.length == 1 ? `0${r}` : r
+                        g = g.length == 1 ? `0${g}` : g
+                        b = b.length == 1 ? `0${b}` : b
+
+                        var color = `#${r}${g}${b}`
+
+                        addRow(id, label, color, line.splice(5,line.length))
+                    }
+                }
+            }
+
+            //from https://github.com/vanillaes/csv/blob/main/index.js
+            function parse (csv, options, reviver = v => v) {
+                const ctx = Object.create(null)
+                ctx.options = options || {}
+                ctx.reviver = reviver
+                ctx.value = ''
+                ctx.entry = []
+                ctx.output = []
+                ctx.col = 1
+                ctx.row = 1
+            
+                const lexer = /"|,|\r\n|\n|\r|[^",\r\n]+/y
+                const isNewline = /^(\r\n|\n|\r)$/
+            
+                let matches = []
+                let match = ''
+                let state = 0
+            
+                while ((matches = lexer.exec(csv)) !== null) {
+                    match = matches[0]
+            
+                    switch (state) {
+                        case 0: // start of entry
+                            switch (true) {
+                                case match === '"':
+                                    state = 3
+                                    break
+                                case match === ',':
+                                    state = 0
+                                    valueEnd(ctx)
+                                    break
+                                case isNewline.test(match):
+                                    state = 0
+                                    valueEnd(ctx)
+                                    entryEnd(ctx)
+                                    break
+                                default:
+                                    ctx.value += match
+                                    state = 2
+                                    break
+                            }
+                            break
+                        case 2: // un-delimited input
+                            switch (true) {
+                                case match === ',':
+                                    state = 0
+                                    valueEnd(ctx)
+                                    break
+                                case isNewline.test(match):
+                                    state = 0
+                                    valueEnd(ctx)
+                                    entryEnd(ctx)
+                                    break
+                                default:
+                                    state = 4
+                                    throw Error(`CSVError: Illegal state [row:${ctx.row}, col:${ctx.col}]`)
+                            }
+                            break
+                        case 3: // delimited input
+                            switch (true) {
+                                case match === '"':
+                                    state = 4
+                                    break
+                                default:
+                                    state = 3
+                                    ctx.value += match
+                                    break
+                            }
+                            break
+                        case 4: // escaped or closing delimiter
+                            switch (true) {
+                                case match === '"':
+                                    state = 3
+                                    ctx.value += match
+                                    break
+                                case match === ',':
+                                    state = 0
+                                    valueEnd(ctx)
+                                    break
+                                case isNewline.test(match):
+                                    state = 0
+                                    valueEnd(ctx)
+                                    entryEnd(ctx)
+                                    break
+                                default:
+                                    throw Error(`CSVError: Illegal state [row:${ctx.row}, col:${ctx.col}]`)
+                            }
+                            break
+                    }
+                }
+            
+                // flush the last value
+                if (ctx.entry.length !== 0) {
+                    valueEnd(ctx)
+                    entryEnd(ctx)
+                }
+            
+                return ctx.output
+            }
+            
+            /** @private */
+            function valueEnd (ctx) {
+                const value = ctx.options.typed ? inferType(ctx.value) : ctx.value
+                ctx.entry.push(ctx.reviver(value, ctx.row, ctx.col))
+                ctx.value = ''
+                ctx.col++
+            }
+            
+            /** @private */
+            function entryEnd (ctx) {
+                ctx.output.push(ctx.entry)
+                ctx.entry = []
+                ctx.row++
+                ctx.col = 1
+            }
+            
+            /** @private */
+            function inferType (value) {
+                const isNumber = /.\./
+            
+                switch (true) {
+                    case value === 'true':
+                    case value === 'false':
+                        return value === 'true'
+                    case isNumber.test(value):
+                        return parseFloat(value)
+                    case isFinite(value):
+                        return parseInt(value)
+                    default:
+                        return value
+                }
+            }
+        </script>
+    
+
+</body></html>

@@ -14,9 +14,12 @@ Using simple two-handed interactions, you can examine and edit your point clouds
 &nbsp;  
 You can also download a [sample point cloud LAZ file](/downloads/sample.laz) to test with.
 
+You can create and download classifier configuration file using [this page](generator). 
+
 - [Instructions](#instructions)
 - [Controller Layouts](#controls)
 - [Settings](#settings)
+- [Classifier File Generator](#classifier)
 - [FAQ](#faq)
 - [Contact and Bug Reports](#contact)
 
@@ -197,6 +200,10 @@ The following settings can be modified as needed:
   type: `bool`  
   default: `true`  
   Controls whether the UI button acts as a toggle (true) or momentary switch (false) to display the user interface.
+
+## Classifier File Generator {#classifier}
+
+You can [generate classifier files using this link](classifier_generator.html) for use with the VR Point Cloud Editor annotation feature.
 
 ## FAQs {#faq}
 
