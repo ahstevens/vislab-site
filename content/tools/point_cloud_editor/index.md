@@ -94,112 +94,29 @@ On first run, the application will generate a file in the application directory 
 
 The following settings can be modified as needed:
 
-- ##### autoHideGroundPlaneOnLoad
-  type: `bool`  
-  default: `true`  
-  When enabled, the ground plane will disappear when a point cloud is loaded.  
-
-- ##### backgroundColor
-  type: `normalized RGBA`  
-  default: `[0.0, 0.0, 0.0, 1.0]`  
-  Sets the background color for the virtual environment.
-
-- ##### cursorDeletionRate
-  type: `float`  
-  default: `10.0`  
-  Controls the rate (in Hz) of deletion commands issued by the editing cursor. Higher values may cause poor performance or crashes.
-
-- ##### cursorDistance
-  type: `float`  
-  default: `0.25`  
-  Sets the initial cursor distance from the controller (meters).
-
-- ##### cursorDistanceMax
-  type: `float`  
-  default: `1.0`  
-  The maximum distance the cursor can be extended from the controller (meters).
-
-- ##### cursorDistanceMin
-  type: `float`  
-  default: `0.1`  
-  The minimum distance the cursor can be extended from the controller (meters).
-
-- ##### cursorRadius
-  type: `float`  
-  default: `0.05`  
-  Initial radius of the editing cursor (meters).
-
-- ##### cursorRadiusMax
-  type: `float`  
-  default: `0.25`  
-  The maximum radius of the editing cursor (meters).  
-
-- ##### cursorRadiusMin
-  type: `float`  
-  default: `0.01`  
-  The minimum radius of the editing cursor (meters).
-
-- ##### distanceOnLoad
-  type: `float`  
-  default: `0.75`  
-  Sets the distance at which the point cloud will be placed from the viewer when loaded or when the view is reset using the UI (meters).
-
-- ##### encResolution
-  type: `int`  
-  default: `4096`  
-  Sets the resolution for ENC basemaps.
-
-- ##### fitSizeOnLoad
-  type: `float`  
-  default: `1.0`  
-  When a point cloud is loaded or the view is reset using the UI, the point cloud will be scaled down to fit within a volume whose maximum dimension is this size (meters) and placed _distanceOnLoad_ away from the viewer.
-
-- ##### lastLoadDirectory
-  type: `string`  
-  default: `""`  
-  Stores the last location a point cloud was loaded from.
-
-- ##### lastSaveDirectory
-  type: `string`  
-  default: `""`  
-  Stores the last location a point cloud was saved to.
-
-- ##### nearPlaneDistance
-  type: `float`  
-  default: `0.1`  
-  Sets the near clipping plane distance from the viewer (meters).
-
-- ##### outlierDistance
-  type: `float`  
-  default: `5.0`  
-  Sets the initial minimum distance at which a point will be considered an outlier (meters). Lowering this parameter will cause points closer together to be considered outliers.
-
-- ##### outlierNeighborCount
-  type: `int`  
-  default: `5`  
-  Sets the initial maximum number of neighboring points contained within the given distance from the candidate point in order for that candidate to still be considered an outlier. For example, a value of 3 would mean that if there are any more than 3 neighboring points within the set distance for the candidate point, it will not be considered an outlier.
-
-- ##### saveCursorOnExit
-  type: `bool`  
-  default: `true`  
-  When enabled, the cursor radius and distance from the controller will be saved to the settings file when the application exits.
-
-- ##### showGroundPlane
-  type: `bool`  
-  default: `true`  
-  Sets whether or not the ground plane is visible when the application starts.
-
-- ##### stickyMaps
-  type: `bool`  
-  default: `true`  
-  When enabled, the touchpad or thumbstick that controls the basemaps can be pressed/clicked to "stick" the basemap so that it persists after the thumb is moved off of the touchpad/thumbstick, and can be clicked again to "unstick" the basemap.
-  
-  When disabled, the basemap will persist after the thumb is removed from the touchpad or thumbstick; hiding the basemap is achieved by activating the North sector of the touchpad or thumbstick.
-
-- ##### stickyUI
-  type: `bool`  
-  default: `true`  
-  Controls whether the UI button acts as a toggle (true) or momentary switch (false) to display the user interface.
+| Setting | Type | Default | Description |
+| ------- | ---- | ------- | ----------- |
+| autoHideGroundPlaneOnLoad | `bool` | `true` | When enabled, the ground plane will disappear when a point cloud is loaded.
+| backgroundColor | `normalized RGBA` | `[0.0, 0.0, 0.0, 1.0]` | Sets the background color for the virtual environment.
+| cursorDeletionRate | `float` | `10.0` | Controls the rate (in Hz) of deletion commands issued by the editing cursor. Higher values may cause poor performance or crashes.
+| cursorDistance | `float` | `0.25` | Sets the initial cursor distance from the controller (meters).
+| cursorDistanceMax | `float` | `1.0` | The maximum distance the cursor can be extended from the controller (meters).
+| cursorDistanceMin | `float` | `0.1` | The minimum distance the cursor can be extended from the controller (meters).
+| cursorRadius | `float` | `0.05` | Initial radius of the editing cursor (meters).
+| cursorRadiusMax | `float` | `0.25` | The maximum radius of the editing cursor (meters).  
+| cursorRadiusMin | `float` | `0.01` | The minimum radius of the editing cursor (meters).
+| distanceOnLoad | `float` | `0.75` | Sets the distance at which the point cloud will be placed from the viewer when loaded or when the view is reset using the UI (meters).
+| encResolution | `int` | `4096` | Sets the resolution for ENC basemaps.
+| fitSizeOnLoad | `float` | `1.0` | When a point cloud is loaded or the view is reset using the UI, the point cloud will be scaled down to fit within a volume whose maximum dimension is this size (meters) and placed _distanceOnLoad_ away from the viewer.
+| lastLoadDirectory | `string` | `""` | Stores the last location a point cloud was loaded from.
+| lastSaveDirectory | `string` | `""` | Stores the last location a point cloud was saved to.
+| nearPlaneDistance | `float` | `0.1` | Sets the near clipping plane distance from the viewer (meters).
+| outlierDistance | `float` | `5.0` | Sets the initial minimum distance at which a point will be considered an outlier (meters). Lowering this parameter will cause points closer together to be considered outliers.
+| outlierNeighborCount | `int` | `5` | Sets the initial maximum number of neighboring points contained within the given distance from the candidate point in order for that candidate to still be considered an outlier. For example, a value of 3 would mean that if there are any more than 3 neighboring points within the set distance for the candidate point, it will not be considered an outlier.
+| saveCursorOnExit | `bool` | `true` | When enabled, the cursor radius and distance from the controller will be saved to the settings file when the application exits.
+| showGroundPlane | `bool` | `true` | Sets whether or not the ground plane is visible when the application starts.
+| stickyMaps | `bool` | `true` | When enabled, the touchpad or thumbstick that controls the basemaps can be pressed/clicked to "stick" the basemap so that it persists after the thumb is moved off of the touchpad or thumbstick, and can be clicked again to "unstick" the basemap. When disabled, the basemap will persist after the thumb is removed from the touchpad or thumbstick; hiding the basemap is achieved by activating the North sector of the touchpad or thumbstick.
+| stickyUI | `bool` | `true` | Controls whether the UI button acts as a toggle (true) or momentary switch (false) to display the user interface.
 
 ## Classifier File Generator {#classifier}
 
