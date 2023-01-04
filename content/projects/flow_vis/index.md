@@ -5,7 +5,30 @@ img: T_FlowVis2D.jpg
 weight: 5
 ---
 
-Colin Ware is leading a multi-faceted flow visualization project at CCOM. It is aimed at producing both optimized static 2D images of flow patterns and highly interactive 2D and 3D flow visualization tools. Currently, other participants include Daniel Pineo who is investigating perceptual theories relating to flow visualization through a computational model, Matt Plumlee who is working on optimal weather displays, and David Pilar who is developing a better alternative to the wind barb glyph. (Click on the images to see larger versions.)
+The VisLab has been working on a multi-faceted flow visualization project at CCOM. It is aimed at producing both optimized static 2D images of flow patterns and highly interactive 2D and 3D flow visualization tools. You can find descriptions of our different efforts below.
+
+## Hairy Slices: Improving 3D Flow Vis {#hairyslices}
+
+Visualizing 3D flow fields is a challenging task, largely due to issues of occlusion. Simple, straightforward mapping of vectors through a volume typically result in an illegible and noisy visualization. We have been investigating techniques to better present complex 3D flow fields for both static and interactive visualizations. A key aspect of our approach is to minimize occlusion by sampling on a cutting plane to reduce the dimensionality of a visualization. When a multidimensional vector field is sampled along a cutting plane and visualized using 3D glyphs, we refer to it as a "hairy slice".
+
+Our studies have shown that shaded 3D conic glyphs yield the best perception of 3D vector direction through a cutting plane, especially when stereoscopic viewing is utilized. When textured with a regular ringed pattern, the magnitude of the local flow is also revealed.
+
+![Hairy Cones](hairycones.png)
+_A hairy slice through a 3D flow field using ringed cone glyphs to improve the perception of flow direction and magnitude._
+
+Interacting with 3D data is almost always made easier through the use of 3D controllers. The recent proliferation of low-cost consumer virtual reality headsets and easily-accessible development tools have paved the way for viewing and exploring 3D flow fields with rich depth cues provided by built-in stereoscopic viewing and motion parallax through head-tracked perspective. Direct interaction with the data using the six-degree-of-freedom (6DOF) spatially tracked controllers leads to intuitive, efficient exploration of large and complex flow fields. We have developed a set of virtual reality tools to facilitate the visualization of and interaction with 3D flow fields using the OpenXR standard.
+
+![Hairy Slices VR](hairy_slice_vr.png)
+_Interacting with a 3D flow field in real-time using our VR flow tools._
+
+##### References:
+
+Stevens, A. H., T. Butkiewicz, and C. Ware (2017). [Hairy Slices: Evaluating the Perceptual Effectiveness of Cutting Plane Glyphs for 3D Vector Fields](/pdfs/Hairy_Slices_1.pdf). IEEE Transactions on Visualization and Computer Graphics. 23(1), p. 990–999.
+
+Stevens, A. H., C. Ware, T. Butkiewicz, D. Rogers, and G. Abram (2020). [Hairy Slices II: Depth Cues for Visualizing 3D Streamlines Through Cutting Planes](/pdfs/Hairy_Slices_2.pdf). Computer Graphics Forum 39(3), p. 25–35.
+
+Stevens, A. H. (2021). [An Empirical Evaluation of Visual Cues for 3D Flow Field Perception](/pdfs/Stevens_Dissertation_2022.pdf). PhD the
+sis. University of New Hampshire.
 
 ## Flow Touch 3D
 
